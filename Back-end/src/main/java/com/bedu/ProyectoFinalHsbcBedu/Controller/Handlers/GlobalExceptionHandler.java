@@ -1,6 +1,7 @@
 package com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers;
 
 import com.bedu.ProyectoFinalHsbcBedu.Entity.builders.ErrorResponse;
+import com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -71,16 +72,35 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<Object> handleBadCredentials(BadCredentialsException ex, WebRequest request){
-        errorResponse.setTimestamp(now());
-        errorResponse.setMessage(ex.getMessage());
-        errorResponse.setStatusCode(HttpStatus.BAD_REQUEST.value());
-        errorResponse.setEndpoint(getEndpoint(request));
-        log.error(ex.getMessage());
-        return handleExceptionInternal(ex, errorResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+        return handleExceptionInternal(
+                ex,
+                buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
+                new HttpHeaders(),
+                HttpStatus.BAD_REQUEST,
+                request);
     }
 
-    // función auxiliar
+    @ExceptionHandler(CustomProductException.class)
+    public ResponseEntity<Object> handleDuplicateProduct(CustomProductException ex, WebRequest request){
+        return handleExceptionInternal(
+                ex,
+                buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
+                new HttpHeaders(),
+                HttpStatus.BAD_REQUEST,
+                request);
+    }
+
+    // funciónes auxiliares
     private String getEndpoint(WebRequest request){
         return request.getDescription(false).substring(4);
+    }
+
+    private ErrorResponse buildErrorResponse(Exception ex, WebRequest request, HttpStatus statusCode){
+        errorResponse.setTimestamp(now());
+        errorResponse.setMessage(ex.getMessage());
+        errorResponse.setStatusCode(statusCode.value());
+        errorResponse.setEndpoint(getEndpoint(request));
+        log.error(ex.getMessage());
+        return errorResponse;
     }
 }
