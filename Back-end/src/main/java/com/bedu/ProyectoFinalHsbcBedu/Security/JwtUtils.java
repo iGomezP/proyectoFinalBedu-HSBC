@@ -41,7 +41,7 @@ public class JwtUtils {
                 .stream()
                 .map(GrantedAuthority::getAuthority)
                 .collect(Collectors.toList());
-        System.out.println(authorities);
+        
         extraClaims.put("authorities", authorities);
         return Jwts.builder()
                 .setClaims(extraClaims)
