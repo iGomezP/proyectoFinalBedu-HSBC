@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.http.converter.HttpMessageNotReadableException;
+import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -40,7 +41,7 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
         errorResponse.setErrores(errors);
         errorResponse.setStatusCode(ex.getStatusCode().value());
-        errorResponse.setEndpoint(request.getDescription(false).substring(4));
+        errorResponse.setEndpoint(getEndpoint(request));
 
         return handleExceptionInternal(ex, errorResponse, headers, HttpStatus.BAD_REQUEST,request);
     }
@@ -60,17 +61,26 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         if (sqlCode == 1062) {
             errorResponse.setTimestamp(now());
             errorResponse.setMessage(ex.getMessage().substring(0, 15));
-            errorResponse.setEndpoint(request.getDescription(false).substring(4));
+            errorResponse.setEndpoint(getEndpoint(request));
             log.error(ex.getLocalizedMessage());
         }
-        /*if (ex.getLocalizedMessage().contains("Duplicate entry")){
-            errorResponse.setTimestamp(now());
-            errorResponse.setStatusCode(ex.getErrorCode());
-            errorResponse.setMessage(ex.getMessage().substring(0,15));
-            errorResponse.setEndpoint(request.getDescription(false).substring(4));
-        }*/
 
         return handleExceptionInternal(ex, errorResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
         //return ResponseEntity.badRequest().body(errorResponse);
+    }
+
+    @ExceptionHandler(BadCredentialsException.class)
+    public ResponseEntity<Object> handleBadCredentials(BadCredentialsException ex, WebRequest request){
+        errorResponse.setTimestamp(now());
+        errorResponse.setMessage(ex.getMessage());
+        errorResponse.setStatusCode(HttpStatus.BAD_REQUEST.value());
+        errorResponse.setEndpoint(getEndpoint(request));
+        log.error(ex.getMessage());
+        return handleExceptionInternal(ex, errorResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
+    }
+
+    // función auxiliar
+    private String getEndpoint(WebRequest request){
+        return request.getDescription(false).substring(4);
     }
 }

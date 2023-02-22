@@ -55,25 +55,19 @@ public class AuthServiceImpl implements IAuthService {
 
     @Override
     public AuthResponse loginUser(AuthRequest authRequest) {
-
-        try{
             authManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
                             authRequest.getUsername(),
                             authRequest.getPassword()
                     )
             );
-        } catch (Exception e){
-            System.out.println(e);
-        }
+            // Once authenticated send back token
+            UsuarioEntity usuarioEntity = usuarioRepository.findByEmail(authRequest.getUsername())
+                    .orElseThrow(() -> new UsernameNotFoundException("El usuario o la contraseña son incorrectos"));
+            var jwtToken = jwtUtils.generateToken(usuarioEntity);
 
-        // Once authenticated send back token
-        UsuarioEntity usuarioEntity = usuarioRepository.findByEmail(authRequest.getUsername())
-                .orElseThrow(() -> new UsernameNotFoundException("El usuario o la contraseña son incorrectos"));
-        var jwtToken = jwtUtils.generateToken(usuarioEntity);
-
-        return AuthResponse.builder()
-                .token(jwtToken)
-                .build();
+            return AuthResponse.builder()
+                    .token(jwtToken)
+                    .build();
     }
 }
