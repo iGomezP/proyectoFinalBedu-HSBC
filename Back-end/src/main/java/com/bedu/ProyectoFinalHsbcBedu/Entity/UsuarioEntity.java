@@ -41,11 +41,13 @@ public class UsuarioEntity implements UserDetails {
     @Column(nullable = false, name = "registry_date")
     @CreationTimestamp
     private LocalDateTime registryDate;
+
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private ERole rol;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "direccion_id")
+    @JoinColumn(name = "direccion_id", nullable = false)
     DireccionEntity direccion;
 
 

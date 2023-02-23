@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
 @Data
-public class DireccionDTO {
+public class DireccionEntityDTO {
 
     @NotNull
     private Long id;

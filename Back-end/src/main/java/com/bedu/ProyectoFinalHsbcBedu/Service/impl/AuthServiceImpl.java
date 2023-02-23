@@ -1,18 +1,15 @@
 package com.bedu.ProyectoFinalHsbcBedu.Service.impl;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioDTO;
+import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioEntityDTO;
 import com.bedu.ProyectoFinalHsbcBedu.Entity.ERole;
-import com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity;
 import com.bedu.ProyectoFinalHsbcBedu.Mapper.IUsuarioMapper;
 import com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepository;
-import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Request.AuthRequest;
 import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Response.AuthResponse;
 import com.bedu.ProyectoFinalHsbcBedu.Security.JwtUtils;
 import com.bedu.ProyectoFinalHsbcBedu.Service.IAuthService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -27,9 +24,9 @@ public class AuthServiceImpl implements IAuthService {
 
 
     @Override
-    public AuthResponse registerUser(UsuarioDTO regRequest) {
+    public AuthResponse registerUser(UsuarioEntityDTO regRequest) {
 
-        UsuarioDTO usuarioDTO = UsuarioDTO.builder()
+        UsuarioEntityDTO usuarioDTO = UsuarioEntityDTO.builder()
                 .name(regRequest.getName())
                 .email(regRequest.getEmail())
                 .userPassword(passwordEncoder.encode(regRequest.getUserPassword()))
@@ -37,7 +34,7 @@ public class AuthServiceImpl implements IAuthService {
                 .rol(ERole.USER)
                 .build();
 
-        UsuarioEntity usuarioEntity = usuarioMapper.toEntity(usuarioDTO);
+        com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity usuarioEntity = usuarioMapper.toEntity(usuarioDTO);
         usuarioRepository.save(usuarioEntity);
 
         var jwtToken = JwtUtils.generateToken(usuarioEntity);

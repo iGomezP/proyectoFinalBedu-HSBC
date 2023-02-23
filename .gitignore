@@ -1,2 +1,4 @@
-/Back-end/logs
-/Back-end/target
+Back-end/logs/**
+Back-end/target/**
+Back-end/.idea
+Back-end/HELP.md

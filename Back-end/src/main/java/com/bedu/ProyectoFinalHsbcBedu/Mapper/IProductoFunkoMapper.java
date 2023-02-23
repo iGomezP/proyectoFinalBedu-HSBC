@@ -12,6 +12,4 @@ public interface IProductoFunkoMapper {
     ProductoFunkoDTO toDTO(ProductoFunkoEntity productoFunkoEntity);
 
     ProductoFunkoEntity toEntity(ProductoFunkoDTO productoFunkoDTO);
-
-    ProductoFunkoDTO toDTO(Optional<ProductoFunkoEntity> funkoExist);
 }

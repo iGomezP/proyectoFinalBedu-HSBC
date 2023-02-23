@@ -1,6 +1,5 @@
 package com.bedu.ProyectoFinalHsbcBedu.DTO;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.DireccionEntity;
 import com.bedu.ProyectoFinalHsbcBedu.Entity.ERole;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.EnumType;
@@ -9,12 +8,16 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @Builder
-public class UsuarioDTO {
+@NoArgsConstructor
+@AllArgsConstructor
+public class UsuarioEntityDTO {
 
     private Long id;
 
@@ -37,5 +40,5 @@ public class UsuarioDTO {
     private ERole rol;
 
     @NotNull
-    DireccionDTO direccion;
+    DireccionEntityDTO direccion;
 }
