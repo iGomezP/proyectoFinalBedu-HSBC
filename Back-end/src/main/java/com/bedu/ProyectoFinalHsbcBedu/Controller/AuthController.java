@@ -1,8 +1,8 @@
-package com.bedu.ProyectoFinalHsbcBedu.Controller;
+package com.bedu.proyectofinalhsbcbedu.controller;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioEntityDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Response.AuthResponse;
-import com.bedu.ProyectoFinalHsbcBedu.Service.IAuthService;
+import com.bedu.proyectofinalhsbcbedu.dto.UsuarioEntityDTO;
+import com.bedu.proyectofinalhsbcbedu.security.auth.response.AuthResponse;
+import com.bedu.proyectofinalhsbcbedu.service.IAuthService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -26,8 +26,4 @@ public class AuthController{
     }
 
     // Se maneja el login por filtro JwtToHeaderFilter
-    /*@PostMapping("/login")
-    public ResponseEntity<AuthResponse> loginUser(@Valid @RequestBody AuthRequest authRequest){
-    return ResponseEntity.ok(authService.loginUser(authRequest));
-    }*/
 }

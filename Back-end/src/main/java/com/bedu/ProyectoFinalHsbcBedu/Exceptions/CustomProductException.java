@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.Exceptions;
+package com.bedu.proyectofinalhsbcbedu.exceptions;
 
 public class CustomProductException extends Exception {
     public CustomProductException(String errorMessage){

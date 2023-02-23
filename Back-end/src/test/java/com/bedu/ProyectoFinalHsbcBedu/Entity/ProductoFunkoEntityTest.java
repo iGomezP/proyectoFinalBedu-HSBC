@@ -1,6 +1,6 @@
-package com.bedu.ProyectoFinalHsbcBedu.Entity;
+package com.bedu.proyectofinalhsbcbedu.entity;
 
-import com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepository;
+import com.bedu.proyectofinalhsbcbedu.repository.IProductoFunkoRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
-import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.test.annotation.Rollback;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -45,7 +44,7 @@ class ProductoFunkoEntityTest {
 
     @Test
     @DisplayName("Crear Funko")
-    public void testCrearFunko(){
+    void testCrearFunko(){
         savedFunko = funkoRepository.save(implementaFunko());
         existFunko = entityManager.find(ProductoFunkoEntity.class, savedFunko.getId());
         assertEquals(existFunko.getName(), implementaFunko().getName());
@@ -53,7 +52,7 @@ class ProductoFunkoEntityTest {
 
     @Test
     @DisplayName("Modifica Funko")
-    public void testModificaFunko(){
+    void testModificaFunko(){
         funkoEntity.setName("Updated Test Funko");
         savedFunko = funkoRepository.save(implementaFunko());
         existFunko = entityManager.find(ProductoFunkoEntity.class, savedFunko.getId());

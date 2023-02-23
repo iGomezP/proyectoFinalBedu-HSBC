@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.Security;
+package com.bedu.proyectofinalhsbcbedu.security;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;

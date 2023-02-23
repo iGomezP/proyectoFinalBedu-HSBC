@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu;
+package com.bedu.proyectofinalhsbcbedu;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

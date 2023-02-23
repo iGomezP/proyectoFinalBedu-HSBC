@@ -2,3 +2,37 @@ Back-end/logs/**
 Back-end/target/**
 Back-end/.idea
 Back-end/HELP.md
+########### Back-End ########
+Back-end/HELP.md
+Back-end/target/
+Back-end/!.mvn/wrapper/maven-wrapper.jar
+Back-end/!**/src/main/**/target/
+Back-end/!**/src/test/**/target/
+
+### STS ###
+Back-end/.apt_generated
+Back-end/.classpath
+Back-end/.factorypath
+Back-end/.project
+Back-end/.settings
+Back-end/.springBeans
+Back-end/.sts4-cache
+
+### IntelliJ IDEA ###
+Back-end/.idea
+Back-end/*.iws
+Back-end/*.iml
+Back-end/*.ipr
+
+### NetBeans ###
+Back-end/nbproject/private/
+Back-end/nbbuild/
+Back-end/dist/
+Back-end/nbdist/
+Back-end/.nb-gradle/
+Back-end/build/
+Back-end/!**/src/main/**/build/
+Back-end/!**/src/test/**/build/
+
+### VS Code ###
+Back-end/.vscode/

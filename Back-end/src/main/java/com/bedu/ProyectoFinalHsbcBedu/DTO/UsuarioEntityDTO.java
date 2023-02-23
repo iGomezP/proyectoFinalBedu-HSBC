@@ -1,6 +1,6 @@
-package com.bedu.ProyectoFinalHsbcBedu.DTO;
+package com.bedu.proyectofinalhsbcbedu.dto;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.ERole;
+import com.bedu.proyectofinalhsbcbedu.entity.ERole;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;

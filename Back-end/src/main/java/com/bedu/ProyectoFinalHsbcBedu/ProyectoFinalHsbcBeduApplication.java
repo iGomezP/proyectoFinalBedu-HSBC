@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu;
+package com.bedu.proyectofinalhsbcbedu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

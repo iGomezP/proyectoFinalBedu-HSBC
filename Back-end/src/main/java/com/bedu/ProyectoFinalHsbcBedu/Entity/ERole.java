@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.Entity;
+package com.bedu.proyectofinalhsbcbedu.entity;
 
 public enum ERole {
     USER, ADMIN

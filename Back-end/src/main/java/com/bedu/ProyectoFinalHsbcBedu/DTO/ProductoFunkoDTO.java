@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.DTO;
+package com.bedu.proyectofinalhsbcbedu.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Past;
@@ -25,8 +25,8 @@ public class ProductoFunkoDTO {
     private int layaway;
 
     @Past(message = "No se puede añadir una fecha del pasado")
-    private LocalDateTime create_date;
+    private LocalDateTime createDate;
 
     @Past(message = "No se puede añadir una fecha del pasado")
-    private LocalDateTime last_update;
+    private LocalDateTime lastUpdate;
 }

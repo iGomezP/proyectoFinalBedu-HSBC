@@ -1,9 +1,8 @@
-package com.bedu.ProyectoFinalHsbcBedu.Repository;
+package com.bedu.proyectofinalhsbcbedu.repository;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.ERole;
-import com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity;
-import com.bedu.ProyectoFinalHsbcBedu.Entity.DireccionEntity;
-import jakarta.validation.ConstraintViolationException;
+import com.bedu.proyectofinalhsbcbedu.entity.ERole;
+import com.bedu.proyectofinalhsbcbedu.entity.UsuarioEntity;
+import com.bedu.proyectofinalhsbcbedu.entity.DireccionEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -18,7 +17,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-@Rollback(true)
+@Rollback
 class IUsuarioRepositoryTest {
     private UsuarioEntity usuarioEntity;
     private UsuarioEntity existUsuario;
@@ -61,7 +60,7 @@ class IUsuarioRepositoryTest {
 
     @Test
     @DisplayName("Crea Cliente")
-    public void testCrearCliente(){
+    void testCrearCliente(){
         savedUsuario = usuarioRepository.save(implementaUsuario());
         existUsuario = entityManager.find(UsuarioEntity.class, savedUsuario.getId());
         assertEquals(existUsuario.getName(), implementaUsuario().getName());
@@ -69,7 +68,7 @@ class IUsuarioRepositoryTest {
 
     @Test
     @DisplayName("Modifica Cliente Correo")
-    public void testModificaClienteCorreo(){
+    void testModificaClienteCorreo(){
         usuarioEntity.setEmail("correo@correo.com");
         savedUsuario = usuarioRepository.save(implementaUsuario());
         existUsuario = entityManager.find(UsuarioEntity.class, savedUsuario.getId());
@@ -78,7 +77,7 @@ class IUsuarioRepositoryTest {
 
     @Test
     @DisplayName("Verifica email null")
-    public void testNullEmail(){
+    void testNullEmail(){
         var newUsuario = UsuarioEntity.builder()
                 .direccion(implementaUsuario().getDireccion())
                 .email(null)
@@ -90,7 +89,7 @@ class IUsuarioRepositoryTest {
 
     @Test
     @DisplayName("Verifica nombre null")
-    public void testNullName(){
+    void testNullName(){
         var newUsuario = UsuarioEntity.builder()
                 .direccion(implementaUsuario().getDireccion())
                 .email(implementaUsuario().getEmail())
@@ -102,7 +101,7 @@ class IUsuarioRepositoryTest {
 
     @Test
     @DisplayName("Verifica password null")
-    public void testNullPassword(){
+    void testNullPassword(){
         var newUsuario = UsuarioEntity.builder()
                 .direccion(implementaUsuario().getDireccion())
                 .email(implementaUsuario().getEmail())

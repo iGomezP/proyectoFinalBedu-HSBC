@@ -1,7 +1,7 @@
-package com.bedu.ProyectoFinalHsbcBedu.Controller;
+package com.bedu.proyectofinalhsbcbedu.controller;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.ProductoFunkoDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Service.IProductoFunkoService;
+import com.bedu.proyectofinalhsbcbedu.dto.ProductoFunkoDTO;
+import com.bedu.proyectofinalhsbcbedu.service.IProductoFunkoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class ProductoFunkoController {
 
     @GetMapping
     public ResponseEntity<List<ProductoFunkoDTO>> getAllFunkos(){
-        return ResponseEntity.ok().body(funkoService.gellAllFunkos());
+        return ResponseEntity.ok().body(funkoService.getAllFunkos());
     }
 
     @GetMapping("/{id}")
@@ -28,19 +28,19 @@ public class ProductoFunkoController {
     }
 
     @PostMapping
-    public ResponseEntity<?> createFunko(@Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception {
+    public ResponseEntity<ProductoFunkoDTO> createFunko(@Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception {
         funkoService.createFunko(funkoDTO);
         return ResponseEntity.created(URI.create("0")).build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateFunko(@Valid @PathVariable("id") long id, @Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception{
+    public ResponseEntity<ProductoFunkoDTO> updateFunko(@Valid @PathVariable("id") long id, @Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception{
         funkoService.updateFunko(id, funkoDTO);
         return ResponseEntity.noContent().build();
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<?> deleteFunko(@PathVariable("id") long id) throws Exception{
+    public ResponseEntity<ProductoFunkoDTO> deleteFunko(@PathVariable("id") long id) throws Exception{
         funkoService.deleteFunko(id);
         return ResponseEntity.noContent().build();
     }
