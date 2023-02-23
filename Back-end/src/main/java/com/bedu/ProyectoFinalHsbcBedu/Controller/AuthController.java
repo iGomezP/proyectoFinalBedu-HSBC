@@ -1,6 +1,6 @@
 package com.bedu.ProyectoFinalHsbcBedu.Controller;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioDTO;
+import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioEntityDTO;
 import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Response.AuthResponse;
 import com.bedu.ProyectoFinalHsbcBedu.Service.IAuthService;
 import jakarta.validation.Valid;
@@ -20,7 +20,7 @@ public class AuthController{
 
     private final IAuthService authService;
     @PostMapping("/register")
-    public ResponseEntity<AuthResponse> registerUser(@Valid @RequestBody UsuarioDTO regRequest){
+    public ResponseEntity<AuthResponse> registerUser(@Valid @RequestBody UsuarioEntityDTO regRequest){
         authService.registerUser(regRequest);
     return ResponseEntity.created(URI.create("/login")).build();
     }

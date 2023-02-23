@@ -34,7 +34,7 @@ public class ProductoFunkoController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateFunko(@Valid @PathVariable("id") long id, @RequestBody ProductoFunkoDTO funkoDTO) throws Exception{
+    public ResponseEntity<?> updateFunko(@Valid @PathVariable("id") long id, @Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception{
         funkoService.updateFunko(id, funkoDTO);
         return ResponseEntity.noContent().build();
     }

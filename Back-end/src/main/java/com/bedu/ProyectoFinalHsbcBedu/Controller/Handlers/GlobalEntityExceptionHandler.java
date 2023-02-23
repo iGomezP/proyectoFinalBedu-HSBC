@@ -34,10 +34,12 @@ public class GlobalEntityExceptionHandler extends ResponseEntityExceptionHandler
         Map<String, String> errors = new TreeMap<>();
 
         for (FieldError error : ex.getBindingResult().getFieldErrors()){
+            log.error(error.getDefaultMessage());
             errors.put(error.getField(), error.getDefaultMessage());
         }
 
         for(ObjectError error : ex.getBindingResult().getGlobalErrors()){
+            log.error(error.getDefaultMessage());
             errors.put(error.getObjectName(), error.getDefaultMessage());
         }
 

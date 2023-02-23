@@ -1,537 +1,451 @@
-[22/02/2023 - 12:12:45] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:12:45] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:12:45] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:12:52] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 28940 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:12:52] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:12:52] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:12:52] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:12:53] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:12:53] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:12:54] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:12:54] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:12:54] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:12:54] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:12:54] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1416 ms
-[22/02/2023 - 12:12:54] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:12:54] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:12:54] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:12:54] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:12:54] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@36027545
-[22/02/2023 - 12:12:54] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:12:54] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:12:55] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:12:55] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:12:56] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:12:56] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@4514ae1d, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@77fd0929, org.springframework.security.web.context.SecurityContextHolderFilter@67639029, org.springframework.security.web.header.HeaderWriterFilter@33dfcbe0, org.springframework.web.filter.CorsFilter@6114cd96, org.springframework.security.web.authentication.logout.LogoutFilter@2625e2ae, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@5c6e9741, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@670a9cc7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1ed7aff7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@da03868, org.springframework.security.web.session.SessionManagementFilter@1339a6b6, org.springframework.security.web.access.ExceptionTranslationFilter@5d007364, org.springframework.security.web.access.intercept.AuthorizationFilter@71f87472]
-[22/02/2023 - 12:12:56] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:12:56] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:12:56] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.572 seconds (process running for 5.187)
-[22/02/2023 - 12:12:56] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:12:57] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:13:16] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:13:16] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:13:16] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:13:22] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 20852 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:13:22] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:13:22] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:13:22] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:13:23] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:13:23] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:13:24] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:13:24] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:13:24] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:13:24] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:13:24] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1460 ms
-[22/02/2023 - 12:13:24] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:13:24] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:13:24] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:13:24] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:13:24] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38e26928
-[22/02/2023 - 12:13:24] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:13:25] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:13:25] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:13:25] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:13:26] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:13:26] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5f5ba917, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@55348485, org.springframework.security.web.context.SecurityContextHolderFilter@194cbc12, org.springframework.security.web.header.HeaderWriterFilter@55bb1fa2, org.springframework.web.filter.CorsFilter@6eb16191, org.springframework.security.web.authentication.logout.LogoutFilter@1abd5d80, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@475db263, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@60ef7ce3, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@30291108, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1bcf6e4e, org.springframework.security.web.session.SessionManagementFilter@3a176292, org.springframework.security.web.access.ExceptionTranslationFilter@37ce2592, org.springframework.security.web.access.intercept.AuthorizationFilter@6a7c032a]
-[22/02/2023 - 12:13:26] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:13:26] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:13:26] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.548 seconds (process running for 5.275)
-[22/02/2023 - 12:13:26] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:13:27] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:13:41] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:13:41] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:13:41] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 2 ms
-[22/02/2023 - 12:13:41] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - El producto no existe
-[22/02/2023 - 12:13:41] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.ProductNotFoundException: El producto no existe]
-[22/02/2023 - 12:15:49] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:15:49] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:15:49] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:15:55] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 28036 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:15:55] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:15:55] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:15:55] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:15:55] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:15:55] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:15:56] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:15:56] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:15:56] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:15:56] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:15:56] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1424 ms
-[22/02/2023 - 12:15:56] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:15:56] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:15:56] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:15:56] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:15:57] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@51fa4857
-[22/02/2023 - 12:15:57] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:15:57] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:15:57] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:15:57] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:15:58] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:15:58] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@1cedd3fb, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5bdf64ea, org.springframework.security.web.context.SecurityContextHolderFilter@5d7feeab, org.springframework.security.web.header.HeaderWriterFilter@20738446, org.springframework.web.filter.CorsFilter@6b14a224, org.springframework.security.web.authentication.logout.LogoutFilter@52ce1aa7, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@54fd91d8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7f6c6770, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@67b2a5ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@60ccffa1, org.springframework.security.web.session.SessionManagementFilter@96f9684, org.springframework.security.web.access.ExceptionTranslationFilter@655a4b1d, org.springframework.security.web.access.intercept.AuthorizationFilter@3a3fa94d]
-[22/02/2023 - 12:15:59] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:15:59] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:15:59] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.788 seconds (process running for 5.541)
-[22/02/2023 - 12:15:59] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:15:59] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Productos agregados exitosamente.
-[22/02/2023 - 12:16:29] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:16:29] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:16:29] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:16:29] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - El producto no existe
-[22/02/2023 - 12:16:29] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.ProductNotFoundException: El producto no existe]
-[22/02/2023 - 12:17:26] [updateFunko] [com.bedu.ProyectoFinalHsbcBedu.Service.impl.ProductoFunkoServiceImpl] [INFO ] - Producto actualizado...
-[22/02/2023 - 12:22:55] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:22:55] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:22:55] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:23:01] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 25136 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:23:01] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:23:01] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:23:01] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:23:02] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:23:02] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:23:03] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:23:03] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:23:03] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:23:03] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:23:03] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1669 ms
-[22/02/2023 - 12:23:03] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:23:03] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:23:03] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:23:03] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:23:04] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6d424a1c
-[22/02/2023 - 12:23:04] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:23:04] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:23:04] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:23:04] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:23:05] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:23:05] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@127fc322, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@619b6320, org.springframework.security.web.context.SecurityContextHolderFilter@4d9105d3, org.springframework.security.web.header.HeaderWriterFilter@577c59ea, org.springframework.web.filter.CorsFilter@25a33096, org.springframework.security.web.authentication.logout.LogoutFilter@7f899819, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@cb46bc5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@103546f8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@eea4a15, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@614c2733, org.springframework.security.web.session.SessionManagementFilter@58d5d5fb, org.springframework.security.web.access.ExceptionTranslationFilter@71d24082, org.springframework.security.web.access.intercept.AuthorizationFilter@30b875f8]
-[22/02/2023 - 12:23:06] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:23:06] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:23:06] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.83 seconds (process running for 5.433)
-[22/02/2023 - 12:23:06] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:23:06] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:23:21] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:23:21] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:23:21] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:23:21] [updateFunko] [com.bedu.ProyectoFinalHsbcBedu.Service.impl.ProductoFunkoServiceImpl] [INFO ] - Producto actualizado...
-[22/02/2023 - 12:27:36] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:27:36] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:27:36] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:27:42] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 29516 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:27:42] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:27:42] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:27:42] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:27:42] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:27:42] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:27:43] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:27:43] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:27:43] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:27:43] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:27:43] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1442 ms
-[22/02/2023 - 12:27:43] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:27:43] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:27:43] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:27:43] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:27:44] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e850136
-[22/02/2023 - 12:27:44] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:27:44] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:27:45] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:27:45] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:27:45] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:27:45] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48bda93f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30b875f8, org.springframework.security.web.context.SecurityContextHolderFilter@5145338d, org.springframework.security.web.header.HeaderWriterFilter@f23ccd6, org.springframework.web.filter.CorsFilter@486183b6, org.springframework.security.web.authentication.logout.LogoutFilter@4cd21dd6, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@5ce757e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b8a1125, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@103546f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37ae60b9, org.springframework.security.web.session.SessionManagementFilter@c70bd3b, org.springframework.security.web.access.ExceptionTranslationFilter@34ecc21f, org.springframework.security.web.access.intercept.AuthorizationFilter@2b3a78e8]
-[22/02/2023 - 12:27:46] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:27:46] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:27:46] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.472 seconds (process running for 5.101)
-[22/02/2023 - 12:27:46] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:27:46] [logMessage] [org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger] [INFO ] - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-[22/02/2023 - 12:27:46] [reportFailure] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
-	at com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication.main(ProyectoFinalHsbcBeduApplication.java:12)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: org.springframework.dao.IncorrectResultSizeDataAccessException: query did not return a unique result: 2
-	at org.springframework.orm.jpa.EntityManagerFactoryUtils.convertJpaAccessExceptionIfPossible(EntityManagerFactoryUtils.java:382)
-	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:235)
-	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
-	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
-	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:242)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:152)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:134)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:218)
-	at jdk.proxy4/jdk.proxy4.$Proxy132.findOneByName(Unknown Source)
-	at com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder.run(FunkosSeeder.java:36)
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
-	... 10 common frames omitted
-Caused by: jakarta.persistence.NonUniqueResultException: query did not return a unique result: 2
-	at org.hibernate.internal.ExceptionConverterImpl.convert(ExceptionConverterImpl.java:128)
-	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:466)
-	at org.hibernate.query.sqm.internal.QuerySqmImpl.getSingleResult(QuerySqmImpl.java:1103)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:401)
-	at jdk.proxy4/jdk.proxy4.$Proxy143.getSingleResult(Unknown Source)
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:193)
-	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:90)
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:148)
-	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:136)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
-	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:164)
-	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:77)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:388)
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
-	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
-	... 19 common frames omitted
-[22/02/2023 - 12:27:46] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:27:46] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:27:46] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:28:08] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 16920 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:28:08] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:28:08] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:28:08] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:28:09] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:28:09] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 65 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:28:10] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:28:10] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:28:10] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:28:10] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:28:10] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1426 ms
-[22/02/2023 - 12:28:10] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:28:10] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:28:10] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:28:10] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:28:10] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cfe76d6
-[22/02/2023 - 12:28:10] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:28:10] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:28:11] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:28:11] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:28:12] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:28:12] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@208451e7, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@5d7feeab, org.springframework.security.web.context.SecurityContextHolderFilter@7f10bc69, org.springframework.security.web.header.HeaderWriterFilter@62cc42b6, org.springframework.web.filter.CorsFilter@28d18836, org.springframework.security.web.authentication.logout.LogoutFilter@52868355, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@287818ec, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65b8d0df, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@187a3e2c, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7f6c6770, org.springframework.security.web.session.SessionManagementFilter@c733a36, org.springframework.security.web.access.ExceptionTranslationFilter@2bbe1125, org.springframework.security.web.access.intercept.AuthorizationFilter@342925f1]
-[22/02/2023 - 12:28:12] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:28:12] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:28:12] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.538 seconds (process running for 5.529)
-[22/02/2023 - 12:28:12] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:28:13] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Productos agregados exitosamente.
-[22/02/2023 - 12:28:29] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:28:29] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:28:29] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:28:29] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - El producto no existe
-[22/02/2023 - 12:28:29] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.ProductNotFoundException: El producto no existe]
-[22/02/2023 - 12:29:03] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - El producto ya existe
-[22/02/2023 - 12:29:03] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.DuplicateProductException: El producto ya existe]
-[22/02/2023 - 12:31:03] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:31:03] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:31:03] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:31:07] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 19024 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:31:07] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:31:08] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:31:08] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:31:08] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:31:08] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:31:09] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:31:09] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:31:09] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:31:09] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:31:09] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1413 ms
-[22/02/2023 - 12:31:09] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:31:09] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:31:09] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:31:09] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:31:10] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@471a9239
-[22/02/2023 - 12:31:10] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:31:10] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:31:11] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:31:11] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:31:11] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:31:12] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@31a410ad, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3c7a31b7, org.springframework.security.web.context.SecurityContextHolderFilter@29165c6d, org.springframework.security.web.header.HeaderWriterFilter@53144e9, org.springframework.web.filter.CorsFilter@68d0a616, org.springframework.security.web.authentication.logout.LogoutFilter@2c6a1168, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@27b5bf85, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@58014b2a, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@c443cf, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@15146000, org.springframework.security.web.session.SessionManagementFilter@652d98e1, org.springframework.security.web.access.ExceptionTranslationFilter@10b708de, org.springframework.security.web.access.intercept.AuthorizationFilter@71a45a]
-[22/02/2023 - 12:31:12] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:31:12] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:31:12] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 5.144 seconds (process running for 5.746)
-[22/02/2023 - 12:31:12] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:31:13] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:31:15] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:31:15] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:31:15] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:31:15] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - El producto ya existe
-[22/02/2023 - 12:31:15] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.DuplicateProductException: El producto ya existe]
-[22/02/2023 - 12:31:21] [updateFunko] [com.bedu.ProyectoFinalHsbcBedu.Service.impl.ProductoFunkoServiceImpl] [INFO ] - Producto actualizado...
-[22/02/2023 - 12:32:39] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:32:39] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:32:39] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:33:13] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 24892 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:33:13] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:33:13] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:33:13] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:33:14] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:33:14] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 59 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:33:14] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:33:14] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:33:14] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:33:15] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:33:15] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1383 ms
-[22/02/2023 - 12:33:15] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:33:15] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:33:15] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:33:15] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:33:15] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d24db69
-[22/02/2023 - 12:33:15] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:33:15] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:33:16] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:33:16] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:33:16] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:33:17] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cc99208, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24570c49, org.springframework.security.web.context.SecurityContextHolderFilter@f2bfccf, org.springframework.security.web.header.HeaderWriterFilter@1ed7aff7, org.springframework.web.filter.CorsFilter@1e45bb7f, org.springframework.security.web.authentication.logout.LogoutFilter@6114cd96, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@5b44c4a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67227360, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d9baa7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a12406e, org.springframework.security.web.session.SessionManagementFilter@5e4e38d, org.springframework.security.web.access.ExceptionTranslationFilter@183fddf9, org.springframework.security.web.access.intercept.AuthorizationFilter@d3abf9f]
-[22/02/2023 - 12:33:17] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:33:17] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:33:17] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.428 seconds (process running for 5.047)
-[22/02/2023 - 12:33:17] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:33:17] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:33:26] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:33:26] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:33:26] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:33:26] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - El producto ya existe
-[22/02/2023 - 12:33:26] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException: El producto ya existe]
-[22/02/2023 - 12:33:53] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:33:53] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:33:53] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:33:58] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 29824 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:33:58] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:33:58] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:33:58] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:33:59] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:33:59] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 62 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:33:59] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:33:59] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:33:59] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:33:59] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:33:59] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1404 ms
-[22/02/2023 - 12:33:59] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:34:00] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:34:00] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:34:00] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:34:00] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@32d61c4e
-[22/02/2023 - 12:34:00] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:34:00] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:34:01] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:34:01] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:34:01] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:34:02] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@740114ee, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4b3d4793, org.springframework.security.web.context.SecurityContextHolderFilter@6d8076ef, org.springframework.security.web.header.HeaderWriterFilter@3eed9322, org.springframework.web.filter.CorsFilter@14d03db4, org.springframework.security.web.authentication.logout.LogoutFilter@2c016ce7, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@4d7955d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@720524d0, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7a00252b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@19db6eef, org.springframework.security.web.session.SessionManagementFilter@53b935aa, org.springframework.security.web.access.ExceptionTranslationFilter@4b7f4961, org.springframework.security.web.access.intercept.AuthorizationFilter@d3646a3]
-[22/02/2023 - 12:34:02] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:34:02] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:34:02] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.463 seconds (process running for 5.086)
-[22/02/2023 - 12:34:02] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:34:02] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:34:05] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:34:05] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:34:05] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:34:05] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - No se puede modificar el nombre del producto
-[22/02/2023 - 12:34:05] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException: No se puede modificar el nombre del producto]
-[22/02/2023 - 12:34:24] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:34:24] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:34:24] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:34:29] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 23784 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:34:29] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:34:29] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:34:29] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:34:29] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:34:29] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 61 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:34:30] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:34:30] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:34:30] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:34:30] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:34:30] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1370 ms
-[22/02/2023 - 12:34:30] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:34:30] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:34:30] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:34:30] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:34:31] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38e26928
-[22/02/2023 - 12:34:31] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:34:31] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:34:32] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:34:32] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:34:32] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:34:32] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@b3a8d03, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30ed9075, org.springframework.security.web.context.SecurityContextHolderFilter@1835a8b, org.springframework.security.web.header.HeaderWriterFilter@6d1eb023, org.springframework.web.filter.CorsFilter@db7732c, org.springframework.security.web.authentication.logout.LogoutFilter@40c862a9, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@6eabd49d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@96d7af6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@194cbc12, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6a7c032a, org.springframework.security.web.session.SessionManagementFilter@28997fc8, org.springframework.security.web.access.ExceptionTranslationFilter@7a4ed8d, org.springframework.security.web.access.intercept.AuthorizationFilter@60ab68f1]
-[22/02/2023 - 12:34:33] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:34:33] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:34:33] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.495 seconds (process running for 5.125)
-[22/02/2023 - 12:34:33] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:34:33] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:34:36] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:34:36] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:34:36] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 2 ms
-[22/02/2023 - 12:34:36] [buildErrorResponse] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalExceptionHandler] [ERROR] - No se puede modificar el nombre del producto a uno ya existente
-[22/02/2023 - 12:34:36] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException: No se puede modificar el nombre del producto a uno ya existente]
-[22/02/2023 - 12:36:25] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:36:25] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:36:26] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:36:32] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 6864 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:36:32] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:36:32] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:36:32] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:36:32] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:36:32] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:36:33] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:36:33] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:36:33] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:36:33] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:36:33] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1405 ms
-[22/02/2023 - 12:36:33] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:36:33] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:36:33] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:36:33] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:36:34] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d24db69
-[22/02/2023 - 12:36:34] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:36:34] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:36:34] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:36:34] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:36:35] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:36:35] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7cc99208, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@24570c49, org.springframework.security.web.context.SecurityContextHolderFilter@f2bfccf, org.springframework.security.web.header.HeaderWriterFilter@1ed7aff7, org.springframework.web.filter.CorsFilter@1e45bb7f, org.springframework.security.web.authentication.logout.LogoutFilter@6114cd96, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@5b44c4a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@67227360, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d9baa7d, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4a12406e, org.springframework.security.web.session.SessionManagementFilter@5e4e38d, org.springframework.security.web.access.ExceptionTranslationFilter@183fddf9, org.springframework.security.web.access.intercept.AuthorizationFilter@d3abf9f]
-[22/02/2023 - 12:36:35] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:36:35] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:36:35] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.321 seconds (process running for 4.925)
-[22/02/2023 - 12:36:36] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:36:36] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:36:37] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:36:37] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:36:37] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:37:35] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:37:35] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:37:35] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:37:40] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 14612 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:37:40] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:37:40] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:37:40] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:37:40] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:37:40] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 67 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:37:41] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:37:41] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:37:41] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:37:41] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:37:41] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1437 ms
-[22/02/2023 - 12:37:41] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:37:41] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:37:41] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:37:41] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:37:42] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@38e26928
-[22/02/2023 - 12:37:42] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:37:42] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:37:43] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:37:43] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:37:43] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:37:43] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@48bda93f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@30b875f8, org.springframework.security.web.context.SecurityContextHolderFilter@5145338d, org.springframework.security.web.header.HeaderWriterFilter@f23ccd6, org.springframework.web.filter.CorsFilter@486183b6, org.springframework.security.web.authentication.logout.LogoutFilter@4cd21dd6, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@6eabd49d, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b8a1125, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@103546f8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@37ae60b9, org.springframework.security.web.session.SessionManagementFilter@c70bd3b, org.springframework.security.web.access.ExceptionTranslationFilter@34ecc21f, org.springframework.security.web.access.intercept.AuthorizationFilter@2b3a78e8]
-[22/02/2023 - 12:37:44] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:37:44] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:37:44] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.579 seconds (process running for 5.222)
-[22/02/2023 - 12:37:44] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:37:44] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:37:46] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:37:46] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:37:46] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:37:59] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:37:59] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:37:59] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:38:04] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 15976 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:38:04] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:38:04] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:38:04] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:38:05] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:38:05] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:38:06] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:38:06] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:38:06] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:38:06] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:38:06] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1461 ms
-[22/02/2023 - 12:38:06] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:38:06] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:38:06] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:38:06] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:38:07] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d24db69
-[22/02/2023 - 12:38:07] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:38:07] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:38:08] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:38:08] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:38:08] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:38:08] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@24570c49, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1e45bb7f, org.springframework.security.web.context.SecurityContextHolderFilter@2df19e2c, org.springframework.security.web.header.HeaderWriterFilter@4afe5aca, org.springframework.web.filter.CorsFilter@4a12406e, org.springframework.security.web.authentication.logout.LogoutFilter@da03868, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@5b44c4a0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@48eadace, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@53b935aa, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7afbc2f6, org.springframework.security.web.session.SessionManagementFilter@6555f993, org.springframework.security.web.access.ExceptionTranslationFilter@2d88f225, org.springframework.security.web.access.intercept.AuthorizationFilter@33b13337]
-[22/02/2023 - 12:38:09] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:38:09] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:38:09] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.622 seconds (process running for 5.265)
-[22/02/2023 - 12:38:09] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:38:09] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:38:11] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:38:11] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:38:11] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 5 ms
-[22/02/2023 - 12:38:22] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:38:22] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:38:22] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
-[22/02/2023 - 12:38:27] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 9068 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
-[22/02/2023 - 12:38:27] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
-[22/02/2023 - 12:38:27] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-[22/02/2023 - 12:38:27] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-[22/02/2023 - 12:38:28] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-[22/02/2023 - 12:38:28] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
-[22/02/2023 - 12:38:28] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
-[22/02/2023 - 12:38:28] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
-[22/02/2023 - 12:38:28] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
-[22/02/2023 - 12:38:28] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
-[22/02/2023 - 12:38:28] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1405 ms
-[22/02/2023 - 12:38:29] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
-[22/02/2023 - 12:38:29] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
-[22/02/2023 - 12:38:29] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
-[22/02/2023 - 12:38:29] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
-[22/02/2023 - 12:38:29] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2e755ac2
-[22/02/2023 - 12:38:29] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
-[22/02/2023 - 12:38:29] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-[22/02/2023 - 12:38:30] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-[22/02/2023 - 12:38:30] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:38:30] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-[22/02/2023 - 12:38:31] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@23e90d1f, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f899819, org.springframework.security.web.context.SecurityContextHolderFilter@2d135bd6, org.springframework.security.web.header.HeaderWriterFilter@133fa8ff, org.springframework.web.filter.CorsFilter@1835a8b, org.springframework.security.web.authentication.logout.LogoutFilter@7bcc01fd, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@66a68f3, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@237c92c8, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@10d17b1f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6287024c, org.springframework.security.web.session.SessionManagementFilter@1e9780b2, org.springframework.security.web.access.ExceptionTranslationFilter@78cdbfea, org.springframework.security.web.access.intercept.AuthorizationFilter@4cd21dd6]
-[22/02/2023 - 12:38:31] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
-[22/02/2023 - 12:38:31] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
-[22/02/2023 - 12:38:31] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 4.632 seconds (process running for 5.452)
-[22/02/2023 - 12:38:31] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
-[22/02/2023 - 12:38:32] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
-[22/02/2023 - 12:38:34] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-[22/02/2023 - 12:38:34] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
-[22/02/2023 - 12:38:34] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
-[22/02/2023 - 12:41:18] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
-[22/02/2023 - 12:41:18] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
-[22/02/2023 - 12:41:18] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:00:10] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:00:10] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:00:10] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:00:14] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 23916 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:00:14] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:00:15] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[23/02/2023 - 12:00:15] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[23/02/2023 - 12:00:15] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:00:15] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:00:16] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
+[23/02/2023 - 12:00:16] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
+[23/02/2023 - 12:00:16] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[23/02/2023 - 12:00:16] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
+[23/02/2023 - 12:00:16] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 1052 ms
+[23/02/2023 - 12:00:16] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:00:16] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:00:16] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:00:16] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:00:16] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@22242823
+[23/02/2023 - 12:00:16] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:00:16] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:00:17] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:00:17] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:00:17] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[23/02/2023 - 12:00:17] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5c6d5083, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1f134d32, org.springframework.security.web.context.SecurityContextHolderFilter@59d3a483, org.springframework.security.web.header.HeaderWriterFilter@657d11e0, org.springframework.web.filter.CorsFilter@84d191, org.springframework.security.web.authentication.logout.LogoutFilter@4749ceb8, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@2e3b8c91, com.bedu.ProyectoFinalHsbcBedu.Security.JwtToHeaderFilter@7724cbfe, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6548b19d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@702d210a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@417b74d1, org.springframework.security.web.session.SessionManagementFilter@23371872, org.springframework.security.web.access.ExceptionTranslationFilter@2c6cebb2, org.springframework.security.web.access.intercept.AuthorizationFilter@6b250307]
+[23/02/2023 - 12:00:18] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
+[23/02/2023 - 12:00:18] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
+[23/02/2023 - 12:00:18] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 3.482 seconds (process running for 3.945)
+[23/02/2023 - 12:00:18] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
+[23/02/2023 - 12:00:18] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
+[23/02/2023 - 12:00:20] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[23/02/2023 - 12:00:20] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Initializing Servlet 'dispatcherServlet'
+[23/02/2023 - 12:00:20] [initServletBean] [org.springframework.web.servlet.DispatcherServlet] [INFO ] - Completed initialization in 1 ms
+[23/02/2023 - 12:00:20] [handleMethodArgumentNotValid] [com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers.GlobalEntityExceptionHandler] [ERROR] - El valor no puede ser negativo
+[23/02/2023 - 12:00:20] [logException] [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver] [WARN ] - Resolved [org.springframework.web.bind.MethodArgumentNotValidException: Validation failed for argument [1] in public org.springframework.http.ResponseEntity<?> com.bedu.ProyectoFinalHsbcBedu.Controller.ProductoFunkoController.updateFunko(long,com.bedu.ProyectoFinalHsbcBedu.DTO.ProductoFunkoDTO) throws java.lang.Exception: [Field error in object 'productoFunkoDTO' on field 'layaway': rejected value [-1]; codes [PositiveOrZero.productoFunkoDTO.layaway,PositiveOrZero.layaway,PositiveOrZero.int,PositiveOrZero]; arguments [org.springframework.context.support.DefaultMessageSourceResolvable: codes [productoFunkoDTO.layaway,layaway]; arguments []; default message [layaway]]; default message [El valor no puede ser negativo]] ]
+[23/02/2023 - 12:12:59] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Starting IUsuarioRepositoryTest using Java 17.0.6 with PID 9784 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:12:59] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:12:59] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:12:59] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:13:00] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:13:00] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:13:00] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:13:00] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:13:00] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@69a5c6be
+[23/02/2023 - 12:13:00] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:13:00] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:13:01] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:13:01] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:13:01] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Started IUsuarioRepositoryTest in 2.634 seconds (process running for 3.476)
+[23/02/2023 - 12:13:01] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:13:01] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:13:02] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:13:02] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:13:02] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:13:41] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Starting IUsuarioRepositoryTest using Java 17.0.6 with PID 25864 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:13:41] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:13:42] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:13:42] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:13:42] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:13:42] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:13:42] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:13:42] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:13:43] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@175c5c3a
+[23/02/2023 - 12:13:43] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:13:43] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:13:43] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:13:43] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:13:44] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Started IUsuarioRepositoryTest in 2.662 seconds (process running for 3.497)
+[23/02/2023 - 12:13:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:13:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:13:44] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:13:44] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:13:44] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:16:45] [onApplicationEvent] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [INFO ] - Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+[23/02/2023 - 12:16:45] [log] [org.apache.catalina.core.StandardService] [INFO ] - Stopping service [Tomcat]
+[23/02/2023 - 12:16:45] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+[23/02/2023 - 12:16:45] [log] [org.apache.catalina.loader.WebappClassLoaderBase] [WARN ] - The web application [ROOT] appears to have started a thread named [HikariPool-1 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+[23/02/2023 - 12:16:45] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:16:45] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:16:45] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:16:45] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 23916 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:16:45] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:16:45] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:16:45] [reportFailure] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+java.lang.TypeNotPresentException: Type com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95) ~[na:na]
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211) ~[na:na]
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:500) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:448) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:250) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:163) ~[spring-data-commons-3.0.1.jar:3.0.1]
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62) ~[spring-boot-autoconfigure-3.0.2.jar:3.0.2]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:373) ~[spring-context-6.0.4.jar:6.0.4]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:372) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:410) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication.main(ProyectoFinalHsbcBeduApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.2.jar:3.0.2]
+Caused by: java.lang.ClassNotFoundException: com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121) ~[spring-boot-devtools-3.0.2.jar:3.0.2]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:467) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114) ~[na:na]
+	... 41 common frames omitted
+[23/02/2023 - 12:16:46] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+[23/02/2023 - 12:16:46] [logTo] [org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] [INFO ] - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+[23/02/2023 - 12:16:46] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 23916 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:16:46] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:16:46] [refresh] [org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] [WARN ] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication]
+[23/02/2023 - 12:16:46] [reportFailure] [org.springframework.boot.SpringApplication] [ERROR] - Application run failed
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:178) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:398) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.2.jar:3.0.2]
+	at com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication.main(ProyectoFinalHsbcBeduApplication.java:12) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-3.0.2.jar:3.0.2]
+Caused by: java.io.FileNotFoundException: class path resource [com/bedu/ProyectoFinalHsbcBedu/Mapper/IDireccionMapper.class] cannot be opened because it does not exist
+	at org.springframework.core.io.ClassPathResource.getInputStream(ClassPathResource.java:211) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.getClassReader(SimpleMetadataReader.java:54) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.core.type.classreading.SimpleMetadataReader.<init>(SimpleMetadataReader.java:48) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:103) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.createMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:86) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.boot.type.classreading.ConcurrentReferenceCachingMetadataReaderFactory.getMetadataReader(ConcurrentReferenceCachingMetadataReaderFactory.java:73) ~[spring-boot-3.0.2.jar:3.0.2]
+	at org.springframework.core.type.classreading.SimpleMetadataReaderFactory.getMetadataReader(SimpleMetadataReaderFactory.java:81) ~[spring-core-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.asSourceClass(ConfigurationClassParser.java:610) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser$SourceClass.getInterfaces(ConfigurationClassParser.java:936) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processInterfaces(ConfigurationClassParser.java:379) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:325) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:188) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:297) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:243) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:196) ~[spring-context-6.0.4.jar:6.0.4]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:164) ~[spring-context-6.0.4.jar:6.0.4]
+	... 18 common frames omitted
+[23/02/2023 - 12:16:49] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 23916 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:16:49] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:16:50] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:16:50] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 38 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:16:50] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
+[23/02/2023 - 12:16:50] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
+[23/02/2023 - 12:16:50] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[23/02/2023 - 12:16:50] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
+[23/02/2023 - 12:16:50] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 622 ms
+[23/02/2023 - 12:16:50] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:16:50] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:16:50] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Starting...
+[23/02/2023 - 12:16:50] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4b7d83e8
+[23/02/2023 - 12:16:50] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Start completed.
+[23/02/2023 - 12:16:50] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:16:50] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:16:50] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:16:50] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[23/02/2023 - 12:16:50] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@5e158d97, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@51931902, org.springframework.security.web.context.SecurityContextHolderFilter@652025bd, org.springframework.security.web.header.HeaderWriterFilter@704b6bd5, org.springframework.web.filter.CorsFilter@4611950b, org.springframework.security.web.authentication.logout.LogoutFilter@123d24cc, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@118350d9, com.bedu.ProyectoFinalHsbcBedu.Security.JwtToHeaderFilter@1f1c68aa, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5390fe7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2e07d956, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6d1737eb, org.springframework.security.web.session.SessionManagementFilter@62cef07f, org.springframework.security.web.access.ExceptionTranslationFilter@42c457a1, org.springframework.security.web.access.intercept.AuthorizationFilter@285e3142]
+[23/02/2023 - 12:16:50] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
+[23/02/2023 - 12:16:50] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
+[23/02/2023 - 12:16:50] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 1.093 seconds (process running for 996.519)
+[23/02/2023 - 12:16:50] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
+[23/02/2023 - 12:16:50] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
+[23/02/2023 - 12:16:50] [onApplicationEvent] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [INFO ] - Condition evaluation unchanged
+[23/02/2023 - 12:17:05] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest] [INFO ] - Starting UsuarioEntityTest using Java 17.0.6 with PID 23104 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:17:05] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:17:06] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:17:06] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:17:06] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:17:06] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:17:06] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:17:06] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:17:06] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3c18942
+[23/02/2023 - 12:17:06] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:17:06] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:17:07] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:17:07] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:17:08] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest] [INFO ] - Started UsuarioEntityTest in 2.665 seconds (process running for 3.476)
+[23/02/2023 - 12:17:08] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:17:08] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:17:08] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:18:19] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Starting IUsuarioRepositoryTest using Java 17.0.6 with PID 25876 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:18:19] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:18:19] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:18:19] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 63 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:18:19] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:18:19] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:18:20] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:18:20] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:18:20] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5fd43e58
+[23/02/2023 - 12:18:20] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:18:20] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:18:21] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:18:21] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:18:21] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Started IUsuarioRepositoryTest in 2.7 seconds (process running for 3.506)
+[23/02/2023 - 12:18:21] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:18:21] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'user_password' cannot be null
+[23/02/2023 - 12:18:21] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:18:21] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:18:21] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:20:33] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Starting IUsuarioRepositoryTest using Java 17.0.6 with PID 16392 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:20:33] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:20:33] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:20:33] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:20:33] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:20:33] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:20:33] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:20:34] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:20:34] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@430df350
+[23/02/2023 - 12:20:34] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:20:34] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:20:35] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:20:35] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:20:35] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest] [INFO ] - Started IUsuarioRepositoryTest in 2.721 seconds (process running for 3.515)
+[23/02/2023 - 12:20:35] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:20:35] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'user_password' cannot be null
+[23/02/2023 - 12:20:35] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:20:35] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'name' cannot be null
+[23/02/2023 - 12:20:35] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:20:35] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:20:35] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:20:35] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:20:35] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:21:33] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest] [INFO ] - Starting IProductoFunkoRepositoryTest using Java 17.0.6 with PID 28560 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:21:33] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:21:34] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:21:34] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 54 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:21:34] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:21:34] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:21:34] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:21:34] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:21:35] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@451e2fa9
+[23/02/2023 - 12:21:35] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:21:35] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:21:35] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:21:35] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:21:36] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest] [INFO ] - Started IProductoFunkoRepositoryTest in 2.65 seconds (process running for 3.444)
+[23/02/2023 - 12:21:36] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:21:36] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:21:36] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:31:38] [onApplicationEvent] [org.springframework.boot.devtools.autoconfigure.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener] [INFO ] - Restarting due to 39 class path changes (0 additions, 0 deletions, 39 modifications)
+[23/02/2023 - 12:31:38] [log] [org.apache.catalina.core.StandardService] [INFO ] - Stopping service [Tomcat]
+[23/02/2023 - 12:31:38] [log] [org.apache.catalina.loader.WebappClassLoaderBase] [WARN ] - The web application [ROOT] appears to have started a thread named [HikariPool-2 housekeeper] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
+ java.base@17.0.6/jdk.internal.misc.Unsafe.park(Native Method)
+ java.base@17.0.6/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+ java.base@17.0.6/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:1182)
+ java.base@17.0.6/java.util.concurrent.ScheduledThreadPoolExecutor$DelayedWorkQueue.take(ScheduledThreadPoolExecutor.java:899)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+ java.base@17.0.6/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+ java.base@17.0.6/java.lang.Thread.run(Thread.java:833)
+[23/02/2023 - 12:31:38] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:31:38] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Shutdown initiated...
+[23/02/2023 - 12:31:38] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Shutdown completed.
+[23/02/2023 - 12:31:38] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Starting ProyectoFinalHsbcBeduApplication using Java 17.0.6 with PID 23916 (C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end\target\classes started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:31:38] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:31:38] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:31:38] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:31:38] [initialize] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat initialized with port(s): 8080 (http)
+[23/02/2023 - 12:31:38] [log] [org.apache.catalina.core.StandardService] [INFO ] - Starting service [Tomcat]
+[23/02/2023 - 12:31:38] [log] [org.apache.catalina.core.StandardEngine] [INFO ] - Starting Servlet engine: [Apache Tomcat/10.1.5]
+[23/02/2023 - 12:31:39] [log] [org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] [INFO ] - Initializing Spring embedded WebApplicationContext
+[23/02/2023 - 12:31:39] [prepareWebApplicationContext] [org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] [INFO ] - Root WebApplicationContext: initialization completed in 364 ms
+[23/02/2023 - 12:31:39] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:31:39] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:31:39] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-3 - Starting...
+[23/02/2023 - 12:31:39] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@8a2eb53
+[23/02/2023 - 12:31:39] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-3 - Start completed.
+[23/02/2023 - 12:31:39] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:31:39] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:31:39] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:31:39] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[23/02/2023 - 12:31:39] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6868400, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@383d8f66, org.springframework.security.web.context.SecurityContextHolderFilter@5cd1f936, org.springframework.security.web.header.HeaderWriterFilter@5a3757dc, org.springframework.web.filter.CorsFilter@1e0bd733, org.springframework.security.web.authentication.logout.LogoutFilter@67dc48e6, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@4162a49, com.bedu.ProyectoFinalHsbcBedu.Security.JwtToHeaderFilter@779be008, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@65776d55, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@59e4f90, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@450fcc7f, org.springframework.security.web.session.SessionManagementFilter@1aaea172, org.springframework.security.web.access.ExceptionTranslationFilter@7b5858e9, org.springframework.security.web.access.intercept.AuthorizationFilter@4a5465a7]
+[23/02/2023 - 12:31:39] [startServer] [org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] [INFO ] - LiveReload server is running on port 35729
+[23/02/2023 - 12:31:39] [start] [org.springframework.boot.web.embedded.tomcat.TomcatWebServer] [INFO ] - Tomcat started on port(s): 8080 (http) with context path ''
+[23/02/2023 - 12:31:39] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication] [INFO ] - Started ProyectoFinalHsbcBeduApplication in 0.916 seconds (process running for 1885.327)
+[23/02/2023 - 12:31:39] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
+[23/02/2023 - 12:31:39] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
+[23/02/2023 - 12:31:39] [onApplicationEvent] [org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] [INFO ] - Condition evaluation unchanged
+[23/02/2023 - 12:31:40] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntityTest] [INFO ] - Starting ProductoFunkoEntityTest using Java 17.0.6 with PID 17164 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:31:40] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntityTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:31:40] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:31:40] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 58 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:31:40] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:31:41] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:31:41] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:31:41] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:31:41] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b46392c
+[23/02/2023 - 12:31:41] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:31:41] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:31:42] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:31:42] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:31:42] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntityTest] [INFO ] - Started ProductoFunkoEntityTest in 2.807 seconds (process running for 3.853)
+[23/02/2023 - 12:31:42] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest]: UsuarioEntityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:31:42] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest
+[23/02/2023 - 12:31:42] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:31:42] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'user_password' cannot be null
+[23/02/2023 - 12:31:42] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:31:42] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'name' cannot be null
+[23/02/2023 - 12:31:42] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:31:42] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:31:42] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests]: ProyectoFinalHsbcBeduApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:31:42] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests
+[23/02/2023 - 12:31:43] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests] [INFO ] - Starting ProyectoFinalHsbcBeduApplicationTests using Java 17.0.6 with PID 17164 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:31:43] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:31:43] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:31:43] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 18 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:31:43] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:31:43] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:31:43] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Starting...
+[23/02/2023 - 12:31:43] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@a3e458
+[23/02/2023 - 12:31:43] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Start completed.
+[23/02/2023 - 12:31:43] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:31:43] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:31:43] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:31:43] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[23/02/2023 - 12:31:44] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7f680a9a, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@3a33d655, org.springframework.security.web.context.SecurityContextHolderFilter@4f5d587c, org.springframework.security.web.header.HeaderWriterFilter@4f8488ef, org.springframework.web.filter.CorsFilter@526a1b51, org.springframework.security.web.authentication.logout.LogoutFilter@183e8c8a, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@3ddc5a75, com.bedu.ProyectoFinalHsbcBedu.Security.JwtToHeaderFilter@4f45290f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@413a2520, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d2bcca8, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70c6c6a7, org.springframework.security.web.session.SessionManagementFilter@56114349, org.springframework.security.web.access.ExceptionTranslationFilter@3b09582d, org.springframework.security.web.access.intercept.AuthorizationFilter@4c3125ff]
+[23/02/2023 - 12:31:44] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests] [INFO ] - Started ProyectoFinalHsbcBeduApplicationTests in 1.402 seconds (process running for 5.56)
+[23/02/2023 - 12:31:44] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
+[23/02/2023 - 12:31:44] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Productos agregados exitosamente.
+[23/02/2023 - 12:31:44] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest]: IProductoFunkoRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:31:44] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest
+[23/02/2023 - 12:31:44] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest]: IUsuarioRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:31:44] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest
+[23/02/2023 - 12:31:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:31:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'user_password' cannot be null
+[23/02/2023 - 12:31:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:31:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'name' cannot be null
+[23/02/2023 - 12:31:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:31:44] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:31:44] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:31:44] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:31:44] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:31:44] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:31:44] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Shutdown initiated...
+[23/02/2023 - 12:31:44] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Shutdown completed.
+[23/02/2023 - 12:32:25] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntityTest] [INFO ] - Starting ProductoFunkoEntityTest using Java 17.0.6 with PID 29684 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:32:25] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntityTest] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:32:25] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:32:25] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 57 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:32:26] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:32:26] [logVersion] [org.hibernate.Version] [INFO ] - HHH000412: Hibernate ORM core version 6.1.6.Final
+[23/02/2023 - 12:32:26] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:32:26] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Starting...
+[23/02/2023 - 12:32:26] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5bec3e0
+[23/02/2023 - 12:32:26] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Start completed.
+[23/02/2023 - 12:32:26] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:32:27] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:32:27] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:32:28] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntityTest] [INFO ] - Started ProductoFunkoEntityTest in 2.856 seconds (process running for 3.725)
+[23/02/2023 - 12:32:28] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest]: UsuarioEntityTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:32:28] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntityTest
+[23/02/2023 - 12:32:28] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:32:28] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'user_password' cannot be null
+[23/02/2023 - 12:32:28] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:32:28] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'name' cannot be null
+[23/02/2023 - 12:32:28] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:32:28] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:32:28] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests]: ProyectoFinalHsbcBeduApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:32:28] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests
+[23/02/2023 - 12:32:28] [logStarting] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests] [INFO ] - Starting ProyectoFinalHsbcBeduApplicationTests using Java 17.0.6 with PID 29684 (started by igome in C:\Bedu-HSBC\5. Demo Day\Proyecto\Back-end)
+[23/02/2023 - 12:32:28] [logStartupProfileInfo] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests] [INFO ] - No active profile set, falling back to 1 default profile: "default"
+[23/02/2023 - 12:32:28] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+[23/02/2023 - 12:32:28] [registerRepositoriesIn] [org.springframework.data.repository.config.RepositoryConfigurationDelegate] [INFO ] - Finished Spring Data repository scanning in 21 ms. Found 2 JPA repository interfaces.
+[23/02/2023 - 12:32:28] [logPersistenceUnitInformation] [org.hibernate.jpa.internal.util.LogHelper] [INFO ] - HHH000204: Processing PersistenceUnitInfo [name: default]
+[23/02/2023 - 12:32:28] [lambda$new$1] [org.hibernate.orm.deprecation] [WARN ] - HHH90000021: Encountered deprecated setting [javax.persistence.sharedCache.mode], use [jakarta.persistence.sharedCache.mode] instead
+[23/02/2023 - 12:32:28] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Starting...
+[23/02/2023 - 12:32:28] [checkFailFast] [com.zaxxer.hikari.pool.HikariPool] [INFO ] - HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@f5a680
+[23/02/2023 - 12:32:28] [getConnection] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Start completed.
+[23/02/2023 - 12:32:28] [logSelectedDialect] [SQL dialect] [INFO ] - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+[23/02/2023 - 12:32:29] [initiateService] [org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] [INFO ] - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+[23/02/2023 - 12:32:29] [buildNativeEntityManagerFactory] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Initialized JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:32:29] [openEntityManagerInViewInterceptor] [org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] [WARN ] - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+[23/02/2023 - 12:32:29] [<init>] [org.springframework.security.web.DefaultSecurityFilterChain] [INFO ] - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@57e83608, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@57d8d8e2, org.springframework.security.web.context.SecurityContextHolderFilter@5c2f5dc, org.springframework.security.web.header.HeaderWriterFilter@5702e6f3, org.springframework.web.filter.CorsFilter@2f726cf4, org.springframework.security.web.authentication.logout.LogoutFilter@1df8ea34, com.bedu.ProyectoFinalHsbcBedu.Security.JwtAuthFilter@359fd0a2, com.bedu.ProyectoFinalHsbcBedu.Security.JwtToHeaderFilter@514eefc4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a925ac4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@27a8bfa1, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4700db93, org.springframework.security.web.session.SessionManagementFilter@2eef43f5, org.springframework.security.web.access.ExceptionTranslationFilter@539570b8, org.springframework.security.web.access.intercept.AuthorizationFilter@12d24c43]
+[23/02/2023 - 12:32:29] [logStarted] [com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplicationTests] [INFO ] - Started ProyectoFinalHsbcBeduApplicationTests in 1.499 seconds (process running for 5.557)
+[23/02/2023 - 12:32:29] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [INFO ] - Insertando valores iniciales...
+[23/02/2023 - 12:32:30] [run] [com.bedu.ProyectoFinalHsbcBedu.Config.FunkosSeeder] [WARN ] - Los productos ya se encuentran agregados a la BD.
+[23/02/2023 - 12:32:30] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest]: IProductoFunkoRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:32:30] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepositoryTest
+[23/02/2023 - 12:32:30] [detectDefaultConfigurationClasses] [org.springframework.test.context.support.AnnotationConfigContextLoaderUtils] [INFO ] - Could not detect default configuration classes for test class [com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest]: IUsuarioRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+[23/02/2023 - 12:32:30] [getOrFindConfigurationClasses] [org.springframework.boot.test.context.SpringBootTestContextBootstrapper] [INFO ] - Found @SpringBootConfiguration com.bedu.ProyectoFinalHsbcBedu.ProyectoFinalHsbcBeduApplication for test class com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepositoryTest
+[23/02/2023 - 12:32:30] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:32:30] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'user_password' cannot be null
+[23/02/2023 - 12:32:30] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:32:30] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'name' cannot be null
+[23/02/2023 - 12:32:30] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [WARN ] - SQL Error: 1048, SQLState: 23000
+[23/02/2023 - 12:32:30] [logExceptions] [org.hibernate.engine.jdbc.spi.SqlExceptionHelper] [ERROR] - Column 'email' cannot be null
+[23/02/2023 - 12:32:30] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:32:30] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown initiated...
+[23/02/2023 - 12:32:30] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-1 - Shutdown completed.
+[23/02/2023 - 12:32:30] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:32:30] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Shutdown initiated...
+[23/02/2023 - 12:32:30] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-2 - Shutdown completed.
+[23/02/2023 - 12:32:43] [destroy] [org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] [INFO ] - Closing JPA EntityManagerFactory for persistence unit 'default'
+[23/02/2023 - 12:32:43] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-3 - Shutdown initiated...
+[23/02/2023 - 12:32:43] [close] [com.zaxxer.hikari.HikariDataSource] [INFO ] - HikariPool-3 - Shutdown completed.
