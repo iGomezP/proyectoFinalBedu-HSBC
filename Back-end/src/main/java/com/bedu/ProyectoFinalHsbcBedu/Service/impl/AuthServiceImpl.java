@@ -1,6 +1,5 @@
 package com.bedu.ProyectoFinalHsbcBedu.Service.impl;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.DireccionDTO;
 import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioDTO;
 import com.bedu.ProyectoFinalHsbcBedu.Entity.ERole;
 import com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity;
@@ -14,7 +13,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
-import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +23,6 @@ public class AuthServiceImpl implements IAuthService {
     private final IUsuarioRepository usuarioRepository;
     private final IUsuarioMapper usuarioMapper;
     private final PasswordEncoder passwordEncoder;
-    private final JwtUtils jwtUtils;
     private final AuthenticationManager authManager;
 
 
@@ -43,7 +40,7 @@ public class AuthServiceImpl implements IAuthService {
         UsuarioEntity usuarioEntity = usuarioMapper.toEntity(usuarioDTO);
         usuarioRepository.save(usuarioEntity);
 
-        var jwtToken = jwtUtils.generateToken(usuarioEntity);
+        var jwtToken = JwtUtils.generateToken(usuarioEntity);
 
         log.info("Usuario creado exitosamente");
 
@@ -53,7 +50,8 @@ public class AuthServiceImpl implements IAuthService {
 
     }
 
-    @Override
+    // Se maneja el login por filtro JwtToHeaderFilter
+    /*@Override
     public AuthResponse loginUser(AuthRequest authRequest) {
             authManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
@@ -64,10 +62,10 @@ public class AuthServiceImpl implements IAuthService {
             // Once authenticated send back token
             UsuarioEntity usuarioEntity = usuarioRepository.findByEmail(authRequest.getUsername())
                     .orElseThrow(() -> new UsernameNotFoundException("El usuario o la contraseña son incorrectos"));
-            var jwtToken = jwtUtils.generateToken(usuarioEntity);
+            var jwtToken = JwtUtils.generateToken(usuarioEntity);
 
             return AuthResponse.builder()
                     .token(jwtToken)
                     .build();
-    }
+    }*/
 }

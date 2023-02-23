@@ -2,6 +2,7 @@ package com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers;
 
 import com.bedu.ProyectoFinalHsbcBedu.Entity.builders.ErrorResponse;
 import com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException;
+import io.jsonwebtoken.security.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -25,7 +26,7 @@ import static java.time.LocalDateTime.now;
 
 @RestControllerAdvice
 @Slf4j
-public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
+public class GlobalEntityExceptionHandler extends ResponseEntityExceptionHandler {
     private final ErrorResponse errorResponse = new ErrorResponse();
 
     @Override
@@ -82,6 +83,16 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
 
     @ExceptionHandler(CustomProductException.class)
     public ResponseEntity<Object> handleDuplicateProduct(CustomProductException ex, WebRequest request){
+        return handleExceptionInternal(
+                ex,
+                buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
+                new HttpHeaders(),
+                HttpStatus.BAD_REQUEST,
+                request);
+    }
+
+    @ExceptionHandler(io.jsonwebtoken.SignatureException.class)
+    public ResponseEntity<Object> handleSignatureException(SignatureException ex, WebRequest request){
         return handleExceptionInternal(
                 ex,
                 buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
