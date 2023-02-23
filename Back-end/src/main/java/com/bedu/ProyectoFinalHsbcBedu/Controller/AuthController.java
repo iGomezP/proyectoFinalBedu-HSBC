@@ -1,7 +1,6 @@
 package com.bedu.ProyectoFinalHsbcBedu.Controller;
 
 import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Request.AuthRequest;
 import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Response.AuthResponse;
 import com.bedu.ProyectoFinalHsbcBedu.Service.IAuthService;
 import jakarta.validation.Valid;
@@ -26,8 +25,9 @@ public class AuthController{
     return ResponseEntity.created(URI.create("/login")).build();
     }
 
-    @PostMapping("/login")
+    // Se maneja el login por filtro JwtToHeaderFilter
+    /*@PostMapping("/login")
     public ResponseEntity<AuthResponse> loginUser(@Valid @RequestBody AuthRequest authRequest){
     return ResponseEntity.ok(authService.loginUser(authRequest));
-    }
+    }*/
 }

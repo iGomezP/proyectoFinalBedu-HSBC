@@ -9,5 +9,6 @@ public interface IAuthService {
 
     AuthResponse registerUser(UsuarioDTO regRequest);
 
-    AuthResponse loginUser(AuthRequest authRequest);
+    // Se maneja el login por filtro JwtToHeaderFilter
+    //AuthResponse loginUser(AuthRequest authRequest);
 }
