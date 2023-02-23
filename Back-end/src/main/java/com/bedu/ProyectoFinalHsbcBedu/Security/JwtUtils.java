@@ -2,7 +2,7 @@ package com.bedu.ProyectoFinalHsbcBedu.Security;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.impl.crypto.DefaultJwtSignatureValidator;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,12 +10,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.core.GrantedAuthority;
 
 import java.security.Key;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+
+import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 
 @Service
 public class JwtUtils {
@@ -25,15 +24,35 @@ public class JwtUtils {
     private final static Long ACCESS_TOKEN_VALIDITY_SECONDS = 2_592_000L;
 
     // Extract userName from token
-    public String extractUsername(String token) {
+    public String extractUsername(String token) throws Exception {
+        boolean signatureCheck = validatetokenSignature(token);
+        if (!signatureCheck){
+            return null;
+        }
+
         return extractClaim(token, Claims::getSubject);
     }
 
+    private boolean validatetokenSignature(String token) throws Exception {
+        // Preparar el token
+        String[] partesJwt = token.split("\\.");
+        String tokenWithoutSignature = partesJwt[0] + "." + partesJwt[1];
+        String signatureFromJwt = partesJwt[2];
+        Key secret = getSigningKey();
+
+        // Check sign
+        DefaultJwtSignatureValidator validator = new DefaultJwtSignatureValidator(HS256, secret);
+        if (!validator.isValid(tokenWithoutSignature, signatureFromJwt)){
+            throw new Exception("No se pudo verificar la integridad del token");
+        }
+        return true;
+    }
+
     // Generate Token without claims
-    public String generateToken(UserDetails userDetails){return generateToken(new HashMap<>(), userDetails);}
+    public static String generateToken(UserDetails userDetails){return generateToken(new HashMap<>(), userDetails);}
 
     // Generate Token with claims
-    public String generateToken (
+    public static String generateToken (
             Map<String, Object> extraClaims,
             UserDetails userDetails){
         long expirationTime = ACCESS_TOKEN_VALIDITY_SECONDS * 1000;
@@ -48,12 +67,12 @@ public class JwtUtils {
                 .setSubject(userDetails.getUsername())
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + expirationTime))
-                .signWith(getSigningKey(), SignatureAlgorithm.HS256)
+                .signWith(getSigningKey(), HS256)
                 .compact();
     }
 
     // Validate token
-    public boolean isTokenValid(String token, UserDetails userDetails){
+    public boolean isTokenValid(String token, UserDetails userDetails) throws Exception {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
     }
@@ -83,7 +102,7 @@ public class JwtUtils {
                 .getBody();
     }
 
-    private Key getSigningKey() {
+    private static Key getSigningKey() {
         byte[] keyBytes = Decoders.BASE64.decode(SECRET_KEY);
         return Keys.hmacShaKeyFor(keyBytes);
     }

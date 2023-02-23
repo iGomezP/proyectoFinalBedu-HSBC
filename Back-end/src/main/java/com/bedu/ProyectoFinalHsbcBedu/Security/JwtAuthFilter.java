@@ -6,6 +6,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,6 +19,7 @@ import java.io.IOException;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 // This intercepts all HTTP Requests
 public class JwtAuthFilter extends OncePerRequestFilter {
 
@@ -44,28 +46,33 @@ public class JwtAuthFilter extends OncePerRequestFilter {
         // Extract token from header
         token = authHeader.substring(7);
 
-        // Extract user email
-        userEmail = jwtUtils.extractUsername(token);
-
-        if (userEmail!= null && SecurityContextHolder.getContext().getAuthentication() == null){
-            // Get the user details from DB
-            UserDetails userDetails = this.userDetailsService.loadUserByUsername(userEmail);
-            // Check is valid
-            if (jwtUtils.isTokenValid(token, userDetails)){
-                // Create authToken
-                UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                        userDetails,
-                        null,
-                        userDetails.getAuthorities()
-                );
-                // Send details from request
-                authToken.setDetails(
-                        new WebAuthenticationDetailsSource().buildDetails(request)
-                );
-                // Update Security context holder
-                SecurityContextHolder.getContext().setAuthentication(authToken);
+        // Extract user email and compare signature
+        try{
+            userEmail = jwtUtils.extractUsername(token);
+            if (userEmail!= null && SecurityContextHolder.getContext().getAuthentication() == null){
+                // Get the user details from DB
+                UserDetails userDetails = this.userDetailsService.loadUserByUsername(userEmail);
+                // Check is valid
+                if (jwtUtils.isTokenValid(token, userDetails)){
+                    // Create authToken
+                    UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
+                            userDetails,
+                            null,
+                            userDetails.getAuthorities()
+                    );
+                    // Send details from request
+                    authToken.setDetails(
+                            new WebAuthenticationDetailsSource().buildDetails(request)
+                    );
+                    // Update Security context holder
+                    SecurityContextHolder.getContext().setAuthentication(authToken);
+                }
             }
+        }catch (Exception ex){
+            log.error(ex.getMessage());
         }
+
+
         // always pass to next step
         filterChain.doFilter(request, response);
     }

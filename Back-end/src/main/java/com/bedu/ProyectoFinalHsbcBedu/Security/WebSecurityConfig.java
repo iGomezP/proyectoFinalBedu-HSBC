@@ -4,6 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -27,8 +28,14 @@ public class WebSecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(
-            HttpSecurity http
+            HttpSecurity http,
+            AuthenticationManager authManager
     )throws Exception {
+
+        JwtToHeaderFilter jwtToHeaderFilter = new JwtToHeaderFilter();
+        jwtToHeaderFilter.setAuthenticationManager(authManager);
+        jwtToHeaderFilter.setFilterProcessesUrl("/api/auth/login");
+
         return http
                 .csrf().disable()
                 .cors(Customizer.withDefaults())
@@ -58,7 +65,8 @@ public class WebSecurityConfig {
                 .sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
-                .authenticationProvider(authenticacionProvider)
+                .addFilter(jwtToHeaderFilter)
+                //.authenticationProvider(authenticacionProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }
