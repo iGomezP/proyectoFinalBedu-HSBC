@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.Entity.builders;
+package com.bedu.proyectofinalhsbcbedu.entity.builders;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;

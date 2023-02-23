@@ -1,13 +1,11 @@
-package com.bedu.ProyectoFinalHsbcBedu.Service;
+package com.bedu.proyectofinalhsbcbedu.service;
 
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioEntityDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Response.AuthResponse;
+import com.bedu.proyectofinalhsbcbedu.dto.UsuarioEntityDTO;
 
 public interface IAuthService {
 
-    AuthResponse registerUser(UsuarioEntityDTO regRequest);
+    void registerUser(UsuarioEntityDTO regRequest);
 
     // Se maneja el login por filtro JwtToHeaderFilter
-    //AuthResponse loginUser(AuthRequest authRequest);
 }

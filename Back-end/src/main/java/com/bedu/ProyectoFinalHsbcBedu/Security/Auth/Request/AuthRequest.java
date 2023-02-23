@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Request;
+package com.bedu.proyectofinalhsbcbedu.security.auth.request;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

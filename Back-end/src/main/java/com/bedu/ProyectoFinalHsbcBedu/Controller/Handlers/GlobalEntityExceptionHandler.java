@@ -1,7 +1,7 @@
-package com.bedu.ProyectoFinalHsbcBedu.Controller.Handlers;
+package com.bedu.proyectofinalhsbcbedu.controller.handlers;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.builders.ErrorResponse;
-import com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException;
+import com.bedu.proyectofinalhsbcbedu.entity.builders.ErrorResponse;
+import com.bedu.proyectofinalhsbcbedu.exceptions.CustomProductException;
 import io.jsonwebtoken.security.SignatureException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
@@ -70,14 +70,13 @@ public class GlobalEntityExceptionHandler extends ResponseEntityExceptionHandler
         }
 
         return handleExceptionInternal(ex, errorResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
-        //return ResponseEntity.badRequest().body(errorResponse);
     }
 
     @ExceptionHandler(BadCredentialsException.class)
     public ResponseEntity<Object> handleBadCredentials(BadCredentialsException ex, WebRequest request){
         return handleExceptionInternal(
                 ex,
-                buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
+                buildErrorResponse(ex, request),
                 new HttpHeaders(),
                 HttpStatus.BAD_REQUEST,
                 request);
@@ -87,31 +86,31 @@ public class GlobalEntityExceptionHandler extends ResponseEntityExceptionHandler
     public ResponseEntity<Object> handleDuplicateProduct(CustomProductException ex, WebRequest request){
         return handleExceptionInternal(
                 ex,
-                buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
+                buildErrorResponse(ex, request),
                 new HttpHeaders(),
                 HttpStatus.BAD_REQUEST,
                 request);
     }
 
-    @ExceptionHandler(io.jsonwebtoken.SignatureException.class)
+    @ExceptionHandler(SignatureException.class)
     public ResponseEntity<Object> handleSignatureException(SignatureException ex, WebRequest request){
         return handleExceptionInternal(
                 ex,
-                buildErrorResponse(ex, request, HttpStatus.BAD_REQUEST),
+                buildErrorResponse(ex, request),
                 new HttpHeaders(),
                 HttpStatus.BAD_REQUEST,
                 request);
     }
 
-    // funciónes auxiliares
+    // funciones auxiliares
     private String getEndpoint(WebRequest request){
         return request.getDescription(false).substring(4);
     }
 
-    private ErrorResponse buildErrorResponse(Exception ex, WebRequest request, HttpStatus statusCode){
+    private ErrorResponse buildErrorResponse(Exception ex, WebRequest request){
         errorResponse.setTimestamp(now());
         errorResponse.setMessage(ex.getMessage());
-        errorResponse.setStatusCode(statusCode.value());
+        errorResponse.setStatusCode(HttpStatus.BAD_REQUEST.value());
         errorResponse.setEndpoint(getEndpoint(request));
         log.error(ex.getMessage());
         return errorResponse;

@@ -1,19 +1,20 @@
-package com.bedu.ProyectoFinalHsbcBedu.Service;
+package com.bedu.proyectofinalhsbcbedu.service;
 
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.ProductoFunkoDTO;
+import com.bedu.proyectofinalhsbcbedu.dto.ProductoFunkoDTO;
+import com.bedu.proyectofinalhsbcbedu.exceptions.CustomProductException;
 
 import java.util.List;
 import java.util.Optional;
 
 public interface IProductoFunkoService {
-    List<ProductoFunkoDTO> gellAllFunkos();
+    List<ProductoFunkoDTO> getAllFunkos();
 
-    Optional<ProductoFunkoDTO> getFunkoById(Long id) throws Exception;
+    Optional<ProductoFunkoDTO> getFunkoById(Long id) throws CustomProductException;
 
-    ProductoFunkoDTO createFunko(ProductoFunkoDTO funkoDTO) throws Exception;
+    void createFunko(ProductoFunkoDTO funkoDTO) throws CustomProductException;
 
-    ProductoFunkoDTO updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws Exception;
+    void updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws CustomProductException;
 
-    void deleteFunko(Long id) throws Exception;
+    void deleteFunko(Long id) throws CustomProductException;
 }

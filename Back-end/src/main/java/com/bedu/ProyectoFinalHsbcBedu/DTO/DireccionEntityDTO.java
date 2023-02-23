@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.DTO;
+package com.bedu.proyectofinalhsbcbedu.dto;
 
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;

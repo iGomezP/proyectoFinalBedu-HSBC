@@ -1,11 +1,11 @@
-package com.bedu.ProyectoFinalHsbcBedu.Security;
+package com.bedu.proyectofinalhsbcbedu.security;
 
+import com.bedu.proyectofinalhsbcbedu.entity.ERole;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -24,7 +24,8 @@ import java.util.Arrays;
 public class WebSecurityConfig {
 
     private final JwtAuthFilter jwtAuthFilter;
-    //private final AuthenticationProvider authenticacionProvider;
+    private static final String AUTH_LOGIN = "/api/auth/login";
+    private static final String ROLE_ADMIN = ERole.ADMIN.toString();
 
     @Bean
     public SecurityFilterChain securityFilterChain(
@@ -34,29 +35,29 @@ public class WebSecurityConfig {
 
         JwtToHeaderFilter jwtToHeaderFilter = new JwtToHeaderFilter();
         jwtToHeaderFilter.setAuthenticationManager(authManager);
-        jwtToHeaderFilter.setFilterProcessesUrl("/api/auth/login");
+        jwtToHeaderFilter.setFilterProcessesUrl(AUTH_LOGIN);
 
         return http
                 .csrf().disable()
                 .cors(Customizer.withDefaults())
                 .authorizeHttpRequests()
                 // Endpoint login
-                .requestMatchers(HttpMethod.DELETE,"/api/auth/login")
-                .hasAuthority("ADMIN")
+                .requestMatchers(HttpMethod.DELETE,AUTH_LOGIN)
+                .hasAuthority(ROLE_ADMIN)
                 // Endpoint usuarios
                 .requestMatchers(HttpMethod.DELETE,"/api/usuarios/**")
-                .hasAuthority("ADMIN")
+                .hasAuthority(ROLE_ADMIN)
                 .requestMatchers("/api/usuarios/**")
-                .hasAnyAuthority("USER", "ADMIN")
+                .hasAnyAuthority("USER", ROLE_ADMIN)
                 // Endpoint productos
                 .requestMatchers(HttpMethod.GET, "/api/productos/**")
-                .hasAnyAuthority("USER", "ADMIN")
+                .hasAnyAuthority("USER", ROLE_ADMIN)
                 .requestMatchers("/api/productos/**")
-                .hasAuthority("ADMIN")
+                .hasAuthority(ROLE_ADMIN)
                 // Entry Endpoint: register
                 .requestMatchers(HttpMethod.POST, "/api/auth/register")
                 .permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/auth/login")
+                .requestMatchers(HttpMethod.POST, AUTH_LOGIN)
                 .permitAll()
                 // Rest of endpoints
                 .anyRequest()
@@ -66,7 +67,6 @@ public class WebSecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
                 .addFilter(jwtToHeaderFilter)
-                //.authenticationProvider(authenticacionProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
     }

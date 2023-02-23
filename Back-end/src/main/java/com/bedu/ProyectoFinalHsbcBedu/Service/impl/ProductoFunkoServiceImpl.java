@@ -1,11 +1,11 @@
-package com.bedu.ProyectoFinalHsbcBedu.Service.impl;
+package com.bedu.proyectofinalhsbcbedu.service.impl;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.ProductoFunkoDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntity;
-import com.bedu.ProyectoFinalHsbcBedu.Exceptions.CustomProductException;
-import com.bedu.ProyectoFinalHsbcBedu.Mapper.IProductoFunkoMapper;
-import com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepository;
-import com.bedu.ProyectoFinalHsbcBedu.Service.IProductoFunkoService;
+import com.bedu.proyectofinalhsbcbedu.dto.ProductoFunkoDTO;
+import com.bedu.proyectofinalhsbcbedu.entity.ProductoFunkoEntity;
+import com.bedu.proyectofinalhsbcbedu.exceptions.CustomProductException;
+import com.bedu.proyectofinalhsbcbedu.mapper.IProductoFunkoMapper;
+import com.bedu.proyectofinalhsbcbedu.repository.IProductoFunkoRepository;
+import com.bedu.proyectofinalhsbcbedu.service.IProductoFunkoService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -20,37 +20,39 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
 
     private final IProductoFunkoRepository funkoRepository;
     private final IProductoFunkoMapper funkoMapper;
+    private static final String NO_FUNKO = "El producto no existe";
+
     @Override
-    public List<ProductoFunkoDTO> gellAllFunkos() {
+    public List<ProductoFunkoDTO> getAllFunkos() {
         List<ProductoFunkoEntity> funkos = funkoRepository.findAll();
         return funkos.stream().map(funkoMapper::toDTO).toList();
     }
 
     @Override
-    public Optional<ProductoFunkoDTO> getFunkoById(Long id) throws Exception{
+    public Optional<ProductoFunkoDTO> getFunkoById(Long id) throws CustomProductException{
         Optional<ProductoFunkoEntity> funkoExist = funkoRepository.findById(id);
         if (funkoExist.isEmpty()) {
-            throw new CustomProductException("El producto no existe");
+            throw new CustomProductException(NO_FUNKO);
         }
         return Optional.ofNullable(funkoMapper.toDTO(funkoExist.get()));
     }
 
     @Override
-    public ProductoFunkoDTO createFunko(ProductoFunkoDTO funkoDTO) throws Exception {
+    public void createFunko(ProductoFunkoDTO funkoDTO) throws CustomProductException {
         ProductoFunkoEntity funkoEntity = funkoMapper.toEntity(funkoDTO);
         if (funkoRepository.findOneByName(funkoEntity.getName())!=null){
-            throw new CustomProductException("El producto ya existe");
+            throw new CustomProductException(NO_FUNKO);
         }
         log.info("Creando nuevo producto...");
-        return funkoMapper.toDTO(funkoRepository.save(funkoEntity));
+        funkoMapper.toDTO(funkoRepository.save(funkoEntity));
     }
 
     @Override
-    public ProductoFunkoDTO updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws Exception {
+    public void updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws CustomProductException {
         Optional<ProductoFunkoEntity> funkoExist = funkoRepository.findById(id);
         ProductoFunkoEntity funkoEntity = funkoMapper.toEntity(funkoDTO);
         if(funkoExist.isEmpty()){
-            throw new CustomProductException("El producto no existe");
+            throw new CustomProductException(NO_FUNKO);
         }
         if (funkoRepository.findOneByName(funkoEntity.getName())!=null && !funkoExist.get().getName().equals(funkoDTO.getName())){
             throw new CustomProductException("No se puede modificar el nombre del producto a uno ya existente");
@@ -61,14 +63,14 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
         funkoEntityNew.setLayaway(funkoDTO.getLayaway());
         funkoEntityNew.setStock(funkoDTO.getStock());
         log.info("Producto actualizado...");
-        return funkoMapper.toDTO(funkoRepository.save(funkoEntityNew));
+        funkoMapper.toDTO(funkoRepository.save(funkoEntityNew));
     }
 
     @Override
-    public void deleteFunko(Long id) throws Exception {
+    public void deleteFunko(Long id) throws CustomProductException {
         Optional<ProductoFunkoEntity> funkoExist = funkoRepository.findById(id);
         if(funkoExist.isEmpty()){
-            throw new CustomProductException("El producto no existe");
+            throw new CustomProductException(NO_FUNKO);
         }
         try {
             funkoRepository.deleteById(id);

@@ -1,4 +1,4 @@
-package com.bedu.ProyectoFinalHsbcBedu.Entity;
+package com.bedu.proyectofinalhsbcbedu.entity;
 
 import com.opencsv.bean.CsvBindByName;
 import jakarta.persistence.*;
@@ -32,7 +32,7 @@ public class ProductoFunkoEntity {
     @CsvBindByName(column = "Apartado")
     private int layaway;
     @CreationTimestamp
-    private LocalDateTime create_date;
+    private LocalDateTime createDate;
     @UpdateTimestamp
-    private LocalDateTime last_update;
+    private LocalDateTime lastUpdate;
 }

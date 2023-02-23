@@ -1,5 +1,6 @@
-package com.bedu.ProyectoFinalHsbcBedu.Security;
+package com.bedu.proyectofinalhsbcbedu.security;
 
+import com.bedu.proyectofinalhsbcbedu.exceptions.CustomProductException;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.impl.crypto.DefaultJwtSignatureValidator;
@@ -21,19 +22,16 @@ public class JwtUtils {
 
     private static final String SECRET_KEY = "7133743677397A24432646294A404E635266556A586E5A723475377821412544";
     // Duración del JWT (30 días)
-    private final static Long ACCESS_TOKEN_VALIDITY_SECONDS = 2_592_000L;
+    private static final Long ACCESS_TOKEN_VALIDITY_SECONDS = 2_592_000L;
 
     // Extract userName from token
-    public String extractUsername(String token) throws Exception {
-        boolean signatureCheck = validatetokenSignature(token);
-        if (!signatureCheck){
-            return null;
-        }
-
+    public String extractUsername(String token) throws CustomProductException {
+        validateTokenSignature(token);
         return extractClaim(token, Claims::getSubject);
+
     }
 
-    private boolean validatetokenSignature(String token) throws Exception {
+    private void validateTokenSignature(String token) throws CustomProductException {
         // Preparar el token
         String[] partesJwt = token.split("\\.");
         String tokenWithoutSignature = partesJwt[0] + "." + partesJwt[1];
@@ -42,10 +40,8 @@ public class JwtUtils {
 
         // Check sign
         DefaultJwtSignatureValidator validator = new DefaultJwtSignatureValidator(HS256, secret);
-        if (!validator.isValid(tokenWithoutSignature, signatureFromJwt)){
-            throw new Exception("No se pudo verificar la integridad del token");
-        }
-        return true;
+        if (!validator.isValid(tokenWithoutSignature, signatureFromJwt))
+            throw new CustomProductException("No se pudo verificar la integridad del token");
     }
 
     // Generate Token without claims
@@ -72,7 +68,7 @@ public class JwtUtils {
     }
 
     // Validate token
-    public boolean isTokenValid(String token, UserDetails userDetails) throws Exception {
+    public boolean isTokenValid(String token, UserDetails userDetails) throws CustomProductException {
         final String username = extractUsername(token);
         return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
     }

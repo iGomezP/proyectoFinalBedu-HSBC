@@ -1,16 +1,14 @@
-package com.bedu.ProyectoFinalHsbcBedu.Security;
+package com.bedu.proyectofinalhsbcbedu.security;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity;
-import com.bedu.ProyectoFinalHsbcBedu.Security.Auth.Request.AuthRequest;
+import com.bedu.proyectofinalhsbcbedu.entity.UsuarioEntity;
+import com.bedu.proyectofinalhsbcbedu.security.auth.request.AuthRequest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.gson.Gson;
 import jakarta.servlet.FilterChain;
-import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
@@ -24,7 +22,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 @Slf4j
 public class JwtToHeaderFilter extends UsernamePasswordAuthenticationFilter {
-    private Gson gson = new Gson();
+    private final Gson gson = new Gson();
 
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
@@ -46,7 +44,7 @@ public class JwtToHeaderFilter extends UsernamePasswordAuthenticationFilter {
     }
 
     @Override
-    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException, ServletException {
+    protected void successfulAuthentication(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authResult) throws IOException{
         UsuarioEntity userDetails = (UsuarioEntity) authResult.getPrincipal();
         Map<String, String> responseJson = new HashMap<>();
 
@@ -60,7 +58,7 @@ public class JwtToHeaderFilter extends UsernamePasswordAuthenticationFilter {
     }
 
     @Override
-    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException, ServletException {
+    protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException{
         log.error(failed.getMessage());
         // Devolver 401 como respuesta
         response.setStatus(401);

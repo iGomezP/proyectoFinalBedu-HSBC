@@ -1,7 +1,7 @@
-package com.bedu.ProyectoFinalHsbcBedu.Config;
+package com.bedu.proyectofinalhsbcbedu.config;
 
 
-import com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepository;
+import com.bedu.proyectofinalhsbcbedu.repository.IUsuarioRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

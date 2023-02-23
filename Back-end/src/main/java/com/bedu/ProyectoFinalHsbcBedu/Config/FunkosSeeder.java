@@ -1,8 +1,8 @@
-package com.bedu.ProyectoFinalHsbcBedu.Config;
+package com.bedu.proyectofinalhsbcbedu.config;
 
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntity;
-import com.bedu.ProyectoFinalHsbcBedu.Repository.IProductoFunkoRepository;
+import com.bedu.proyectofinalhsbcbedu.entity.ProductoFunkoEntity;
+import com.bedu.proyectofinalhsbcbedu.repository.IProductoFunkoRepository;
 import com.opencsv.bean.CsvToBeanBuilder;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -22,10 +22,12 @@ public class FunkosSeeder implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-// Generar lista a partir del CSV
+    // Generar lista a partir del CSV
         // Ruta para servidor remoto: /opt/tomcat/apache-tomcat/webapps/docs/Anime.csv
         // Ruta para servidor local y jar: ./csv/Anime.csv
-        List<ProductoFunkoEntity> nuevosFunkos = new CsvToBeanBuilder(new FileReader("/opt/tomcat/apache-tomcat/webapps/docs/Anime.csv"))
+        var file = new FileReader("/opt/tomcat/apache-tomcat/webapps/docs/Anime.csv");
+        var csvBuilder = new CsvToBeanBuilder<ProductoFunkoEntity>(file);
+        List<ProductoFunkoEntity> nuevosFunkos = csvBuilder
                 .withType(ProductoFunkoEntity.class)
                 .build()
                 .parse();

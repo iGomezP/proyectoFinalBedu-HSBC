@@ -1,6 +1,6 @@
-package com.bedu.ProyectoFinalHsbcBedu.Entity;
+package com.bedu.proyectofinalhsbcbedu.entity;
 
-import com.bedu.ProyectoFinalHsbcBedu.Repository.IUsuarioRepository;
+import com.bedu.proyectofinalhsbcbedu.repository.IUsuarioRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -59,7 +59,7 @@ class UsuarioEntityTest {
 
     @Test
     @DisplayName("Crea Cliente")
-    public void testCrearCliente(){
+    void testCrearCliente(){
         savedUsuario = usuarioRepository.save(implementaUsuario());
         existUsuario = entityManager.find(UsuarioEntity.class, savedUsuario.getId());
         assertEquals(existUsuario.getName(), implementaUsuario().getName());
@@ -67,7 +67,7 @@ class UsuarioEntityTest {
 
     @Test
     @DisplayName("Modifica Cliente Correo")
-    public void testModificaClienteCorreo(){
+    void testModificaClienteCorreo(){
         usuarioEntity.setEmail("mail2@mail.com");
         savedUsuario = usuarioRepository.save(implementaUsuario());
         existUsuario = entityManager.find(UsuarioEntity.class, savedUsuario.getId());
@@ -76,7 +76,7 @@ class UsuarioEntityTest {
 
     @Test
     @DisplayName("Verifica email null")
-    public void testNullEmail(){
+    void testNullEmail(){
         var newUsuario = UsuarioEntity.builder()
                 .direccion(implementaUsuario().getDireccion())
                 .email(null)
@@ -88,7 +88,7 @@ class UsuarioEntityTest {
 
     @Test
     @DisplayName("Verifica nombre null")
-    public void testNullName(){
+    void testNullName(){
         var newUsuario = UsuarioEntity.builder()
                 .direccion(implementaUsuario().getDireccion())
                 .email(implementaUsuario().getEmail())
@@ -100,7 +100,7 @@ class UsuarioEntityTest {
 
     @Test
     @DisplayName("Verifica password null")
-    public void testNullPassword(){
+    void testNullPassword(){
         var newUsuario = UsuarioEntity.builder()
                 .direccion(implementaUsuario().getDireccion())
                 .email(implementaUsuario().getEmail())

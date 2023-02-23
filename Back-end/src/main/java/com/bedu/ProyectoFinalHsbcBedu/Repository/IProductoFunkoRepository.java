@@ -1,6 +1,6 @@
-package com.bedu.ProyectoFinalHsbcBedu.Repository;
+package com.bedu.proyectofinalhsbcbedu.repository;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntity;
+import com.bedu.proyectofinalhsbcbedu.entity.ProductoFunkoEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

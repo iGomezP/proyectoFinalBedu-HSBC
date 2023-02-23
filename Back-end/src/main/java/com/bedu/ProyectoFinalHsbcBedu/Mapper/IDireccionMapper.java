@@ -1,7 +1,7 @@
-package com.bedu.ProyectoFinalHsbcBedu.Mapper;
+package com.bedu.proyectofinalhsbcbedu.mapper;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.DireccionEntityDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Entity.DireccionEntity;
+import com.bedu.proyectofinalhsbcbedu.dto.DireccionEntityDTO;
+import com.bedu.proyectofinalhsbcbedu.entity.DireccionEntity;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 

@@ -1,6 +1,6 @@
-package com.bedu.ProyectoFinalHsbcBedu.Repository;
+package com.bedu.proyectofinalhsbcbedu.repository;
 
-import com.bedu.ProyectoFinalHsbcBedu.Entity.ProductoFunkoEntity;
+import com.bedu.proyectofinalhsbcbedu.entity.ProductoFunkoEntity;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -44,7 +44,7 @@ class IProductoFunkoRepositoryTest {
 
     @Test
     @DisplayName("Crear Funko")
-    public void testCrearFunko(){
+    void testCrearFunko(){
         savedFunko = funkoRepository.save(implementaFunko());
         existFunko = entityManager.find(ProductoFunkoEntity.class, savedFunko.getId());
         assertEquals(existFunko.getName(), implementaFunko().getName());
@@ -52,7 +52,7 @@ class IProductoFunkoRepositoryTest {
 
     @Test
     @DisplayName("Modifica Funko")
-    public void testModificaFunko(){
+    void testModificaFunko(){
         funkoEntity.setName("Updated Test Funko");
         savedFunko = funkoRepository.save(implementaFunko());
         existFunko = entityManager.find(ProductoFunkoEntity.class, savedFunko.getId());

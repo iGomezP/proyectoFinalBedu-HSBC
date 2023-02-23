@@ -1,7 +1,7 @@
-package com.bedu.ProyectoFinalHsbcBedu.Mapper;
+package com.bedu.proyectofinalhsbcbedu.mapper;
 
-import com.bedu.ProyectoFinalHsbcBedu.DTO.UsuarioEntityDTO;
-import com.bedu.ProyectoFinalHsbcBedu.Entity.UsuarioEntity;
+import com.bedu.proyectofinalhsbcbedu.dto.UsuarioEntityDTO;
+import com.bedu.proyectofinalhsbcbedu.entity.UsuarioEntity;
 import org.mapstruct.*;
 
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
