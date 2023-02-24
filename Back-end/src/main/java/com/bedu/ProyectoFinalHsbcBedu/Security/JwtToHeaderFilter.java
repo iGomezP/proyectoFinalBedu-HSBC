@@ -60,9 +60,11 @@ public class JwtToHeaderFilter extends UsernamePasswordAuthenticationFilter {
     @Override
     protected void unsuccessfulAuthentication(HttpServletRequest request, HttpServletResponse response, AuthenticationException failed) throws IOException{
         log.error(failed.getMessage());
+        Map<String, String> responseJson = new HashMap<>();
         // Devolver 401 como respuesta
+        responseJson.put("error",failed.getMessage());
         response.setStatus(401);
-        response.sendError(401, failed.getMessage());
-        //response.getWriter().flush();
+        response.getWriter().write(this.gson.toJson(responseJson));
+        response.getWriter().flush();
     }
 }
