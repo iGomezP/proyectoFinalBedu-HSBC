@@ -102,6 +102,16 @@ public class GlobalEntityExceptionHandler extends ResponseEntityExceptionHandler
                 request);
     }
 
+    @ExceptionHandler(NullPointerException.class)
+    public ResponseEntity<Object> handleNullPointer(NullPointerException ex, WebRequest request){
+        return handleExceptionInternal(
+                ex,
+                buildErrorResponse(ex, request),
+                new HttpHeaders(),
+                HttpStatus.BAD_REQUEST,
+                request);
+    }
+
     // funciones auxiliares
     private String getEndpoint(WebRequest request){
         return request.getDescription(false).substring(4);

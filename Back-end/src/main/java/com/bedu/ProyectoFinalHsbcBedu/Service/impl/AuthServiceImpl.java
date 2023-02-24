@@ -2,6 +2,7 @@ package com.bedu.proyectofinalhsbcbedu.service.impl;
 
 import com.bedu.proyectofinalhsbcbedu.dto.UsuarioEntityDTO;
 import com.bedu.proyectofinalhsbcbedu.entity.ERole;
+import com.bedu.proyectofinalhsbcbedu.entity.UsuarioEntity;
 import com.bedu.proyectofinalhsbcbedu.mapper.IUsuarioMapper;
 import com.bedu.proyectofinalhsbcbedu.repository.IUsuarioRepository;
 import com.bedu.proyectofinalhsbcbedu.security.JwtUtils;
@@ -32,7 +33,8 @@ public class AuthServiceImpl implements IAuthService {
                 .rol(ERole.USER)
                 .build();
 
-        com.bedu.proyectofinalhsbcbedu.entity.UsuarioEntity usuarioEntity = usuarioMapper.toEntity(usuarioDTO);
+        UsuarioEntity usuarioEntity = usuarioMapper.toEntity(usuarioDTO);
+        System.out.println(usuarioEntity);
         usuarioRepository.save(usuarioEntity);
 
         var jwtToken = JwtUtils.generateToken(usuarioEntity);

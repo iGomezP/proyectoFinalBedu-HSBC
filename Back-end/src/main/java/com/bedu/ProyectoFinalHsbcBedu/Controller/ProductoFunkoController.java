@@ -4,8 +4,10 @@ import com.bedu.proyectofinalhsbcbedu.dto.ProductoFunkoDTO;
 import com.bedu.proyectofinalhsbcbedu.service.IProductoFunkoService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.net.URI;
 import java.util.List;
@@ -27,9 +29,9 @@ public class ProductoFunkoController {
         return ResponseEntity.ok().body(funkoService.getFunkoById(id));
     }
 
-    @PostMapping
-    public ResponseEntity<ProductoFunkoDTO> createFunko(@Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception {
-        funkoService.createFunko(funkoDTO);
+    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<ProductoFunkoDTO> createFunko(@Valid @RequestParam("dataFunko") String funkoJson, @RequestParam("imageFunko") MultipartFile imageFunko) throws Exception {
+        funkoService.createFunko(funkoJson, imageFunko);
         return ResponseEntity.created(URI.create("0")).build();
     }
 

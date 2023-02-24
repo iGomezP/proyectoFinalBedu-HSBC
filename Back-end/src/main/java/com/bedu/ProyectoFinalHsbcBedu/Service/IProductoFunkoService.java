@@ -3,6 +3,7 @@ package com.bedu.proyectofinalhsbcbedu.service;
 
 import com.bedu.proyectofinalhsbcbedu.dto.ProductoFunkoDTO;
 import com.bedu.proyectofinalhsbcbedu.exceptions.CustomProductException;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,7 +13,7 @@ public interface IProductoFunkoService {
 
     Optional<ProductoFunkoDTO> getFunkoById(Long id) throws CustomProductException;
 
-    void createFunko(ProductoFunkoDTO funkoDTO) throws CustomProductException;
+    void createFunko(String funkoJson, MultipartFile imageFunko) throws CustomProductException;
 
     void updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws CustomProductException;
 
