@@ -1,6 +1,7 @@
 package com.bedu.proyectofinalhsbcbedu.dto;
 
 import com.bedu.proyectofinalhsbcbedu.entity.ERole;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -19,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class UsuarioEntityDTO {
 
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @JsonIgnore
     private Long id;
 
     @NotEmpty(message = "El nombre no puede estar vacío")
