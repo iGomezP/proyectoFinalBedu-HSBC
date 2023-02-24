@@ -100,8 +100,8 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
 
         ProductoFunkoEntity funkoEntity = funkoMapper.toEntity(funkoDTO);
         if (funkoRepository.findOneByName(funkoEntity.getName())!=null){
-            log.error(NO_FUNKO);
-            throw new CustomProductException(NO_FUNKO);
+            log.error("El producto ya existe");
+            throw new CustomProductException("El producto ya existe");
         }
         log.info("Creando nuevo producto...");
         funkoMapper.toDTO(funkoRepository.save(funkoEntity));
