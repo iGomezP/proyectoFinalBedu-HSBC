@@ -91,7 +91,7 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
 
         // Construir funkoDTO
         ProductoFunkoDTO funkoDTO = ProductoFunkoDTO.builder()
-                .name(newJson.get("name").toString())
+                .name(newJson.get("name").toString().replace("\"", ""))
                 .price(newJson.get("price").getAsInt())
                 .stock(newJson.get("stock").getAsInt())
                 .layaway(newJson.get("layaway").getAsInt())

@@ -8,7 +8,6 @@ Back-end/target/
 Back-end/!.mvn/wrapper/maven-wrapper.jar
 Back-end/!**/src/main/**/target/
 Back-end/!**/src/test/**/target/
-Back-end/src/main/resources/application.properties
 
 ### STS ###
 Back-end/.apt_generated

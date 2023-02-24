@@ -20,6 +20,7 @@ import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 @Service
 public class JwtUtils {
 
+
     private static final String SECRET_KEY = "7133743677397A24432646294A404E635266556A586E5A723475377821412544";
     // Duración del JWT (30 días)
     private static final Long ACCESS_TOKEN_VALIDITY_SECONDS = 2_592_000L;

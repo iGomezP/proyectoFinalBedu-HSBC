@@ -1,5 +1,6 @@
 package com.bedu.proyectofinalhsbcbedu.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
@@ -7,6 +8,7 @@ import lombok.Data;
 @Data
 public class DireccionEntityDTO {
 
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     @NotNull
     private Long id;
 
