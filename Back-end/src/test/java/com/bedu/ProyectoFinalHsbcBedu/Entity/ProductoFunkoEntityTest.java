@@ -26,12 +26,20 @@ class ProductoFunkoEntityTest {
     @Autowired
     private IProductoFunkoRepository funkoRepository;
 
+    public AwsImageFunkoEntity implementaImage(){
+        return AwsImageFunkoEntity.builder()
+                .name("Mock Image")
+                .awsUrl("Mock Url")
+                .build();
+    }
+
     public ProductoFunkoEntity implementaFunko(){
         return ProductoFunkoEntity.builder()
                 .layaway(5)
                 .name("Funko Test")
                 .price(5000)
                 .stock(10)
+                .awsImageFunko(implementaImage())
                 .build();
     }
 

@@ -47,6 +47,7 @@ class UsuarioEntityTest {
                 .name("Ignacio")
                 .rol(ERole.USER)
                 .userPassword("Contra@123")
+
                 .build();
     }
 
