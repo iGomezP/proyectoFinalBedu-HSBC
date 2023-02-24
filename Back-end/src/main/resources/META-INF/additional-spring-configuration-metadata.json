@@ -5,5 +5,10 @@
       "type": "java.lang.String",
       "description": "Description for application.bucket.name.",
       "defaultValue": "geros-bucket"
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "Description for jwt.secret."
     }
   ] }

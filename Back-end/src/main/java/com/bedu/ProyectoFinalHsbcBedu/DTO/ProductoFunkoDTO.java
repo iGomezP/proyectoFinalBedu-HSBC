@@ -1,6 +1,7 @@
 package com.bedu.proyectofinalhsbcbedu.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Positive;
@@ -13,6 +14,8 @@ import java.time.LocalDateTime;
 @Data
 @Builder
 public class ProductoFunkoDTO {
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     Long id;
 
     @NotEmpty(message = "El nombre del producto no puede estar vacío")
