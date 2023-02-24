@@ -62,6 +62,7 @@ public class JwtToHeaderFilter extends UsernamePasswordAuthenticationFilter {
         log.error(failed.getMessage());
         // Devolver 401 como respuesta
         response.setStatus(401);
-        response.getWriter().flush();
+        response.sendError(401, failed.getMessage());
+        //response.getWriter().flush();
     }
 }

@@ -72,16 +72,6 @@ public class GlobalEntityExceptionHandler extends ResponseEntityExceptionHandler
         return handleExceptionInternal(ex, errorResponse, new HttpHeaders(), HttpStatus.BAD_REQUEST, request);
     }
 
-    @ExceptionHandler(BadCredentialsException.class)
-    public ResponseEntity<Object> handleBadCredentials(BadCredentialsException ex, WebRequest request){
-        return handleExceptionInternal(
-                ex,
-                buildErrorResponse(ex, request),
-                new HttpHeaders(),
-                HttpStatus.BAD_REQUEST,
-                request);
-    }
-
     @ExceptionHandler(CustomProductException.class)
     public ResponseEntity<Object> handleDuplicateProduct(CustomProductException ex, WebRequest request){
         return handleExceptionInternal(
