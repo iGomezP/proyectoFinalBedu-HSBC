@@ -8,7 +8,6 @@ import lombok.Data;
 @Data
 @Builder
 public class AwsImageFunkoDTO {
-    @JsonIgnore
     private Long id;
     private String name;
     private String awsUrl;
