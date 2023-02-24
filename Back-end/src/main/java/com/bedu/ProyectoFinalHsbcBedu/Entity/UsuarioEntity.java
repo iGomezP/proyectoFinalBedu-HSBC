@@ -45,7 +45,7 @@ public class UsuarioEntity implements UserDetails {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "direccion_id", nullable = false)
-    private transient DireccionEntity direccion;
+    private DireccionEntity direccion;
 
 
     @Override

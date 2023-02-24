@@ -35,4 +35,7 @@ public class ProductoFunkoEntity {
     private LocalDateTime createDate;
     @UpdateTimestamp
     private LocalDateTime lastUpdate;
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "image_funko_id", nullable = false)
+    private AwsImageFunkoEntity awsImageFunko;
 }
