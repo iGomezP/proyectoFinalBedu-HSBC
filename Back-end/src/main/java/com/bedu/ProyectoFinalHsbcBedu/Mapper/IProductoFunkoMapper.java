@@ -5,6 +5,8 @@ import com.bedu.proyectofinalhsbcbedu.entity.ProductoFunkoEntity;
 import org.mapstruct.InjectionStrategy;
 import org.mapstruct.Mapper;
 
+import java.util.Optional;
+
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface IProductoFunkoMapper {
     ProductoFunkoDTO toDTO(ProductoFunkoEntity productoFunkoEntity);

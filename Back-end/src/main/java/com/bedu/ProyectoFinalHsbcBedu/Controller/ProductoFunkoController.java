@@ -30,14 +30,14 @@ public class ProductoFunkoController {
     }
 
     @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<ProductoFunkoDTO> createFunko(@Valid @RequestParam("dataFunko") String funkoJson, @RequestParam("imageFunko") MultipartFile imageFunko) throws Exception {
+    public ResponseEntity<ProductoFunkoDTO> createFunko(@RequestParam("dataFunko") String funkoJson, @RequestParam("imageFunko") MultipartFile imageFunko) throws Exception {
         funkoService.createFunko(funkoJson, imageFunko);
         return ResponseEntity.created(URI.create("0")).build();
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<ProductoFunkoDTO> updateFunko(@Valid @PathVariable("id") long id, @Valid @RequestBody ProductoFunkoDTO funkoDTO) throws Exception{
-        funkoService.updateFunko(id, funkoDTO);
+    public ResponseEntity<ProductoFunkoDTO> updateFunko(@Valid @PathVariable("id") long id, @RequestParam("dataFunko") String funkoJson, @RequestParam("imageFunko") MultipartFile imageFunko) throws Exception{
+        funkoService.updateFunko(id, funkoJson,imageFunko);
         return ResponseEntity.noContent().build();
     }
 

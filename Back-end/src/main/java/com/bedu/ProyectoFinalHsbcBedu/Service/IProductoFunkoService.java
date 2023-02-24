@@ -15,7 +15,7 @@ public interface IProductoFunkoService {
 
     void createFunko(String funkoJson, MultipartFile imageFunko) throws CustomProductException;
 
-    void updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws CustomProductException;
+    void updateFunko(Long id, String funkoJson, MultipartFile imageFunko) throws CustomProductException;
 
     void deleteFunko(Long id) throws CustomProductException;
 }

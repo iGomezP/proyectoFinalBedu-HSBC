@@ -56,38 +56,8 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
     public void createFunko(String funkoJson, MultipartFile imageFunko) throws CustomProductException {
         // Convertir String a Json
         JsonObject newJson = convertToJson(funkoJson);
-
-        // Subir imagen a Aws S3
-        String fileName;
-        try{
-            fileName = getNewImageName(newJson, Objects.requireNonNull(imageFunko.getOriginalFilename()));
-        } catch (NullPointerException ex){
-            log.error("NullPointerException: " + ex.getMessage());
-            throw new CustomProductException(ex.getMessage());
-        }
-        String s3Key = "imagesFunkos/" + fileName;
-        log.info("Nuevo nombre de imagen: " + fileName);
-        try{
-            ObjectMetadata metadata = new ObjectMetadata();
-            metadata.setContentLength(imageFunko.getSize());
-            amazonS3Client.putObject(bucketName, s3Key, imageFunko.getInputStream(), metadata);
-            log.info("Imagen subida: " + fileName);
-        } catch (IOException ioe){
-            log.error("IOException: " + ioe.getMessage());
-            throw new CustomProductException(ioe.getMessage());
-        } catch (AmazonS3Exception s3Exception){
-            log.error("AmazonServiceException: " + s3Exception.getMessage());
-            throw new CustomProductException(s3Exception.getMessage());
-        } catch (AmazonClientException clientException){
-            log.error("AmazonClientException Message: " + clientException.getMessage());
-            throw new CustomProductException(clientException.getMessage());
-        }
-
-        // Recuperar url de la imagen
-        String urlImage = amazonS3Client.getUrl(bucketName, s3Key).toString();
-
-        // Construir ImagenDTO
-        AwsImageFunkoDTO imagenDTO = buildImagenDTO(fileName, urlImage);
+        // Subir imagen
+        AwsImageFunkoDTO imagenDTO = uploadImage(newJson, imageFunko);
 
         // Construir funkoDTO
         ProductoFunkoDTO funkoDTO = ProductoFunkoDTO.builder()
@@ -111,22 +81,42 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
 
 
     @Override
-    public void updateFunko(Long id, ProductoFunkoDTO funkoDTO) throws CustomProductException {
+    public void updateFunko(Long id, String funkoJson, MultipartFile imageFunko) throws CustomProductException {
+        // Convertir String a Json
+        JsonObject newJson = convertToJson(funkoJson);
+        // Subir Imagen
+        AwsImageFunkoDTO imageFunkoDTO = uploadImage(newJson, imageFunko);
+
+        // Verificar si existe el funko
         Optional<ProductoFunkoEntity> funkoExist = funkoRepository.findById(id);
-        ProductoFunkoEntity funkoEntity = funkoMapper.toEntity(funkoDTO);
         if(funkoExist.isEmpty()){
             log.error(NO_FUNKO);
             throw new CustomProductException(NO_FUNKO);
         }
+
+        // Construir funkoDTO
+        ProductoFunkoDTO funkoDTO = ProductoFunkoDTO.builder()
+                .name(newJson.get("name").toString().replace("\"", ""))
+                .price(newJson.get("price").getAsInt())
+                .stock(newJson.get("stock").getAsInt())
+                .layaway(newJson.get("layaway").getAsInt())
+                .awsImageFunko(imageFunkoDTO)
+                .build();
+
+        // Convertir a entity
+        ProductoFunkoEntity funkoEntity = funkoMapper.toEntity(funkoDTO);
         if (funkoRepository.findOneByName(funkoEntity.getName())!=null && !funkoExist.get().getName().equals(funkoDTO.getName())){
             log.error("No se puede modificar el nombre del producto a uno ya existente");
             throw new CustomProductException("No se puede modificar el nombre del producto a uno ya existente");
         }
+
         ProductoFunkoEntity funkoEntityNew = funkoExist.get();
-        funkoEntityNew.setName(funkoDTO.getName());
-        funkoEntityNew.setPrice(funkoDTO.getPrice());
-        funkoEntityNew.setLayaway(funkoDTO.getLayaway());
-        funkoEntityNew.setStock(funkoDTO.getStock());
+        funkoEntityNew.setName(funkoEntity.getName());
+        funkoEntityNew.setPrice(funkoEntity.getPrice());
+        funkoEntityNew.setLayaway(funkoEntity.getLayaway());
+        funkoEntityNew.setStock(funkoEntity.getStock());
+        funkoEntityNew.setAwsImageFunko(funkoEntity.getAwsImageFunko());
+        System.out.println(funkoEntityNew);
         log.info("Producto actualizado...");
         funkoMapper.toDTO(funkoRepository.save(funkoEntityNew));
     }
@@ -164,5 +154,40 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
                 .name(name)
                 .awsUrl(url)
                 .build();
+    }
+
+    private AwsImageFunkoDTO uploadImage(JsonObject newJson, MultipartFile imageFunko ) throws CustomProductException{
+        // Subir imagen a Aws S3
+        String fileName;
+        try{
+            fileName = getNewImageName(newJson, Objects.requireNonNull(imageFunko.getOriginalFilename()));
+        } catch (NullPointerException ex){
+            log.error("NullPointerException: " + ex.getMessage());
+            throw new CustomProductException(ex.getMessage());
+        }
+        String s3Key = "imagesFunkos/" + fileName;
+        log.info("Nuevo nombre de imagen: " + fileName);
+        try{
+            ObjectMetadata metadata = new ObjectMetadata();
+            metadata.setContentLength(imageFunko.getSize());
+            amazonS3Client.putObject(bucketName, s3Key, imageFunko.getInputStream(), metadata);
+            log.info("Imagen subida: " + fileName);
+        } catch (IOException ioe){
+            log.error("IOException: " + ioe.getMessage());
+            throw new CustomProductException(ioe.getMessage());
+        } catch (AmazonS3Exception s3Exception){
+            log.error("AmazonServiceException: " + s3Exception.getMessage());
+            throw new CustomProductException(s3Exception.getMessage());
+        } catch (AmazonClientException clientException){
+            log.error("AmazonClientException Message: " + clientException.getMessage());
+            throw new CustomProductException(clientException.getMessage());
+        }
+
+        // Recuperar url de la imagen
+        String urlImage = amazonS3Client.getUrl(bucketName, s3Key).toString();
+
+        // Construir ImagenDTO
+        return buildImagenDTO(fileName, urlImage);
+
     }
 }

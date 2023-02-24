@@ -34,7 +34,6 @@ public class AuthServiceImpl implements IAuthService {
                 .build();
 
         UsuarioEntity usuarioEntity = usuarioMapper.toEntity(usuarioDTO);
-        System.out.println(usuarioEntity);
         usuarioRepository.save(usuarioEntity);
 
         var jwtToken = JwtUtils.generateToken(usuarioEntity);
