@@ -36,3 +36,9 @@ Back-end/!**/src/test/**/build/
 
 ### VS Code ###
 Back-end/.vscode/
+
+
+##### Front-end #####
+Front-end/.vscode
+Front-end/node_modules
+Front-end/.angular
