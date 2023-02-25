@@ -1,0 +1,23 @@
+.forbidden-container {
+  text-align: center;
+  padding: 0;
+  margin: 1rem auto;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  > h1,
+  h3,
+  h4 {
+    text-transform: uppercase;
+  }
+
+  > h4 {
+    padding-bottom: 1rem;
+  }
+}

@@ -1,0 +1,57 @@
+<header>
+	<div class="header-container">
+		<nav class="nav-logo-container">
+			<a class="logo" routerLink="/">
+				<img class="img-logo" src="assets/imgs/Logo.jpg" alt="Logo">
+			</a>
+			<ul class="nav-primario">
+				<li *ngIf="!isSessionExpired">
+					<a routerLink="/productos">
+						Productos
+					</a>
+				</li>
+				<li *ngIf="!isSessionExpired && roleVerified">
+					<a routerLink="/usuarios">
+						Usuarios
+					</a>
+				</li>
+			</ul>
+			<ul class="nav-secundario">
+				<!-- Aparece solo si es rol ADMIN -->
+				<li *ngIf="!isSessionExpired && roleVerified">
+					<a routerLink="/admin">
+						<span class="span-text">Administrador: </span>
+						<mat-icon>supervisor_account</mat-icon>
+					</a>
+				</li>
+				<!-- Aparece solo si es rol USUARIO -->
+				<li *ngIf="!isSessionExpired && !roleVerified">
+					<a routerLink="/usuario">
+						<span class="span-text">Usuario: </span>
+						<mat-icon>account_circle</mat-icon>
+					</a>
+				</li>
+				<!-- Aparece solo si no está logueado -->
+				<li *ngIf="isSessionExpired">
+					<a routerLink="/signup">
+						<span class="span-text">Regístrate</span>
+						<mat-icon>person_add</mat-icon>
+					</a>
+				</li>
+				<li *ngIf="isSessionExpired">
+					<a routerLink="/login">
+						<span class="span-text">Inicia Sesión</span>
+						<mat-icon>login</mat-icon>
+					</a>
+				</li>
+				<!-- Aparece solo cuando está logueado -->
+				<li *ngIf="!isSessionExpired">
+					<a (click)="closeSession()">
+						<span class="span-text">Cerrar Sesión</span>
+						<mat-icon>logout</mat-icon>
+					</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+</header>

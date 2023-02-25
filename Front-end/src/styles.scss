@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  box-sizing: inherit;
+  height: 100%;
+}
+
+html *,
+html ::after,
+html ::before {
+  box-sizing: inherit;
+}
+
+// Header & Footer
+.header-container,
+.footer-container {
+  position: relative;
+  max-width: 100%;
+  background-color: #111;
+  color: #ffff;
+  height: 100px;
+}
+
+.header-container {
+  position: sticky;
+  top: 0;
+}
+.nav-logo-container,
+.logos-sociales {
+  max-width: 100%;
+  width: 90rem;
+  margin: 0 auto;
+  display: flex;
+  padding: 1rem;
+}
+.logo {
+  width: 10%;
+  text-align: center;
+}
+.img-logo {
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.mat-icon {
+  transform: scale(1.5);
+  vertical-align: text-bottom;
+}
+
+.span-text {
+  margin-right: 10px;
+}
+// nav
+.nav-logo-container {
+  align-items: center;
+  position: static;
+
+  > * {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+      list-style-type: none;
+      line-height: 3.5rem;
+      height: 3.5rem;
+      display: inline-block;
+      vertical-align: top;
+      color: #fff;
+      position: static;
+
+      > a {
+        color: #fff;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: inline-block;
+        line-height: 0;
+        padding: 1rem;
+        text-decoration: none;
+        cursor: pointer;
+        text-align: inherit;
+        position: relative;
+      }
+    }
+  }
+}
+
+.nav-secundario {
+  width: 70%;
+  float: right;
+  text-align: right !important;
+}
+
+// ul
+.nav-primario {
+  width: 20%;
+  text-align: left;
+}
+
+.footer-primario {
+  width: 90% !important;
+}
+
+// Inputs forms
+.mdc-text-field--filled:not(.mdc-text-field--disabled) {
+  background-color: #111;
+}
+
+.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #ffee00;
+}
+
+.mdc-text-field .mdc-text-field__input {
+  caret-color: #ffee00;
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled):hover
+  .mdc-line-ripple::before {
+  border-bottom-color: #ffee00;
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled)
+  .mdc-line-ripple::after {
+  border-bottom-color: #ffee00;
+}
+
+.mdc-text-field--filled .mdc-line-ripple::after {
+  border-bottom-color: #ffee00;
+}
+
+// Snackbar colors
+.green-snackbar {
+  --mat-mdc-snack-bar-button-color: rgba(0, 0, 0, 0.87);
+  --mdc-snackbar-container-color: rgb(65, 252, 134);
+  --mdc-snackbar-supporting-text-color: rgba(0, 0, 0, 1);
+}
+.green-snackbar button {
+  background-color: rgb(65, 252, 134);
+  color: #111;
+  border: none;
+}
+
+.red-snackbar {
+  --mat-mdc-snack-bar-button-color: rgba(0, 0, 0, 0.87);
+  --mdc-snackbar-container-color: #f44336;
+  --mdc-snackbar-supporting-text-color: rgba(255, 255, 255, 0.87);
+}
+.red-snackbar button {
+  background-color: #f44336;
+  color: white !important;
+  border: none;
+}
