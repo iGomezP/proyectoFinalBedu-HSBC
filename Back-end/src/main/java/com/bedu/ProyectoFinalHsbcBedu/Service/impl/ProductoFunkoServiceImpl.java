@@ -9,10 +9,12 @@ import com.bedu.proyectofinalhsbcbedu.dto.ProductoFunkoDTO;
 import com.bedu.proyectofinalhsbcbedu.entity.ProductoFunkoEntity;
 import com.bedu.proyectofinalhsbcbedu.exceptions.CustomProductException;
 import com.bedu.proyectofinalhsbcbedu.mapper.IProductoFunkoMapper;
+import com.bedu.proyectofinalhsbcbedu.repository.IAwsImageFunkoRepository;
 import com.bedu.proyectofinalhsbcbedu.repository.IProductoFunkoRepository;
 import com.bedu.proyectofinalhsbcbedu.service.IProductoFunkoService;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -27,9 +29,12 @@ import java.util.Optional;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Transactional
 public class ProductoFunkoServiceImpl implements IProductoFunkoService {
 
     private final IProductoFunkoRepository funkoRepository;
+
+    private final IAwsImageFunkoRepository awsImageFunkoRepository;
     private final IProductoFunkoMapper funkoMapper;
     private final AmazonS3 amazonS3Client;
 
@@ -84,8 +89,6 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
     public void updateFunko(Long id, String funkoJson, MultipartFile imageFunko) throws CustomProductException {
         // Convertir String a Json
         JsonObject newJson = convertToJson(funkoJson);
-        // Subir Imagen
-        AwsImageFunkoDTO imageFunkoDTO = uploadImage(newJson, imageFunko);
 
         // Verificar si existe el funko
         Optional<ProductoFunkoEntity> funkoExist = funkoRepository.findById(id);
@@ -93,6 +96,12 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
             log.error(NO_FUNKO);
             throw new CustomProductException(NO_FUNKO);
         }
+
+        // Eliminar imagen anterior de la BD
+        awsImageFunkoRepository.deleteAllByName(funkoExist.get().getAwsImageFunko().getName());
+
+        // Subir Imagen
+        AwsImageFunkoDTO imageFunkoDTO = uploadImage(newJson, imageFunko);
 
         // Construir funkoDTO
         ProductoFunkoDTO funkoDTO = ProductoFunkoDTO.builder()
@@ -105,7 +114,7 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
 
         // Convertir a entity
         ProductoFunkoEntity funkoEntity = funkoMapper.toEntity(funkoDTO);
-        if (funkoRepository.findOneByName(funkoEntity.getName())!=null && !funkoExist.get().getName().equals(funkoDTO.getName())){
+        if (funkoRepository.findOneByName(funkoEntity.getName())!=null && !funkoEntity.getName().equals(funkoDTO.getName())){
             log.error("No se puede modificar el nombre del producto a uno ya existente");
             throw new CustomProductException("No se puede modificar el nombre del producto a uno ya existente");
         }
@@ -116,7 +125,6 @@ public class ProductoFunkoServiceImpl implements IProductoFunkoService {
         funkoEntityNew.setLayaway(funkoEntity.getLayaway());
         funkoEntityNew.setStock(funkoEntity.getStock());
         funkoEntityNew.setAwsImageFunko(funkoEntity.getAwsImageFunko());
-        System.out.println(funkoEntityNew);
         log.info("Producto actualizado...");
         funkoMapper.toDTO(funkoRepository.save(funkoEntityNew));
     }

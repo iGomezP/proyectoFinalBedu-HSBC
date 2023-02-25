@@ -6,6 +6,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.impl.crypto.DefaultJwtSignatureValidator;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.security.core.GrantedAuthority;
@@ -18,6 +19,7 @@ import java.util.stream.Collectors;
 import static io.jsonwebtoken.SignatureAlgorithm.HS256;
 
 @Service
+@Slf4j
 public class JwtUtils {
 
 
@@ -29,8 +31,8 @@ public class JwtUtils {
     public String extractUsername(String token) throws CustomProductException {
         validateTokenSignature(token);
         return extractClaim(token, Claims::getSubject);
-
     }
+
 
     private void validateTokenSignature(String token) throws CustomProductException {
         // Preparar el token
@@ -71,7 +73,32 @@ public class JwtUtils {
     // Validate token
     public boolean isTokenValid(String token, UserDetails userDetails) throws CustomProductException {
         final String username = extractUsername(token);
-        return (username.equals(userDetails.getUsername())) && !isTokenExpired(token);
+        return (username.equals(userDetails.getUsername())) && !isTokenExpired(token) && isRoleValid(token, userDetails);
+    }
+
+    // Validate Role
+    // Suponiendo que en un futuro un usuario tenga más de un rol se mantiene las listas
+    private boolean isRoleValid(String token, UserDetails userDetails){
+        // Get claims
+        Claims claims = extractAllClaims(token);
+        // Get rol from jwt claims
+        List<String> authorities = (List<String>) claims.get("authorities");
+
+        // Get rol from user and add to new list
+        Collection<? extends GrantedAuthority> userDetailAuthorities = userDetails.getAuthorities();
+        List<String> roles = new ArrayList<>();
+
+        for (GrantedAuthority authority : userDetailAuthorities){
+            String authorityName = authority.getAuthority();
+            roles.add(authorityName);
+        }
+
+        // Compare rol
+        if (!authorities.get(0).equals(roles.get(0))){
+            log.error("Los roles no coinciden");
+            return false;
+        }
+        return true;
     }
 
     private boolean isTokenExpired(String token) {
