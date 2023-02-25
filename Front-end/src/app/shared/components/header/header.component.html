@@ -20,14 +20,14 @@
 				<!-- Aparece solo si es rol ADMIN -->
 				<li *ngIf="!isSessionExpired && roleVerified">
 					<a routerLink="/admin">
-						<span class="span-text">Administrador: </span>
+						<span class="span-text">{{userName}}: </span>
 						<mat-icon>supervisor_account</mat-icon>
 					</a>
 				</li>
 				<!-- Aparece solo si es rol USUARIO -->
 				<li *ngIf="!isSessionExpired && !roleVerified">
 					<a routerLink="/usuario">
-						<span class="span-text">Usuario: </span>
+						<span class="span-text">{{userName}}: </span>
 						<mat-icon>account_circle</mat-icon>
 					</a>
 				</li>

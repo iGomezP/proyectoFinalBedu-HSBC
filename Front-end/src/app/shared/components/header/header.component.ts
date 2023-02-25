@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   isSessionExpired = false;
   userRoleLocal = '';
   roleVerified!: boolean;
+  userName!: string;
 
   constructor(
     private tokenService: JwtService,
@@ -35,6 +36,7 @@ export class HeaderComponent implements OnInit {
     } else {
       this.roleVerified = false;
     }
+    this.userName = this.tokenService.getUserName();
   }
 
   closeSession() {
