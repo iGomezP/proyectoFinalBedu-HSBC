@@ -1,0 +1,16 @@
+<div class="productos-container">
+	<div class="container">
+		<div class="funko-container" *ngFor="let funko of allFunkosData">
+			<div class="imgBox">
+				<img src="{{funko.awsImageFunko.awsUrl}}" alt="Funko of" class="funko">
+			</div>
+
+			<div class="contentBox">
+				<h3>{{funko.name}}</h3>
+				<h2 class="price">$ {{funko.price}}</h2>
+				<h2 class="stock">Quedan: {{funko.stock - funko.layaway}} disponibles</h2>
+				<a routerLink="" class="buy">Ver Producto</a>
+			</div>
+		</div>
+	</div>
+</div>
