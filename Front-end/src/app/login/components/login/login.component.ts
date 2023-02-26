@@ -11,8 +11,8 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
 })
 export class LoginComponent implements OnInit {
   form = {
-    username: 'admin@admin.com',
-    password: 'Admin@123',
+    username: '',
+    password: '',
   };
   private fullRes: any;
   hidePassword = true;
