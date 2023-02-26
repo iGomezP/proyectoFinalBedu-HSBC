@@ -19,7 +19,6 @@ export class FunkosService {
 
   getAllFunkosService(): Observable<any> {
     const token = this.storageService.getJwtToken();
-    console.log(`Bearer ${token}`);
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',

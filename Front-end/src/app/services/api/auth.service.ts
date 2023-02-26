@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environment';
+import { UsuarioModel } from 'src/app/models/usuario.model';
 
 const AUTH_API = environment.API_SERVER;
 
@@ -25,5 +26,11 @@ export class AuthService {
         observe: 'response',
       }
     );
+  }
+
+  apiRegister(usuario: UsuarioModel): Observable<any> {
+    return this.httpClient.post<any>(AUTH_API + 'auth/register', usuario, {
+      headers: httpOptions,
+    });
   }
 }
