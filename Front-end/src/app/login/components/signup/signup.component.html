@@ -1,0 +1,62 @@
+<div class="signup-container">
+	<div class="container">
+		<div class="img-container">
+			<h1>Regístrate</h1>
+			<img class="logo_white" src="assets/imgs/Logo_White.png" alt="Logo">
+		</div>
+
+		<div class="form-container-signup" *ngIf="mostrarComponentePadre">
+			<div class="message">
+				<h1>Introduce tus datos de usuario</h1>
+			</div>
+			<mat-form-field appearance="fill">
+				<mat-label class="inputs">Introduce tu nombre</mat-label>
+				<input class="inputs" matInput type="text" [(ngModel)]="form.username" required />
+				<mat-hint align="start">
+					Debe contener al
+					menos 1
+					mayúscula, 1
+					minúscula, 1 número, 1 símbolo y
+					mínimo 8 caracteres
+				</mat-hint>
+			</mat-form-field>
+			<!-- <div class="message-container">
+				<p [ngClass]="{ 'message-visible': inputUserFocus, 'message-hidden' : !inputUserFocus }">
+					No debe contener caracteres especiales, debe
+					tener mínimo 6 caracteres y máximo 30</p>
+			</div> -->
+			<mat-form-field appearance="fill">
+				<mat-label class="inputs">Introduce tu email</mat-label>
+				<input class="inputs" matInput type="email" [(ngModel)]="form.email" required />
+			</mat-form-field>
+			<!-- Password -->
+			<mat-form-field appearance="fill">
+				<mat-label>Introduce tu contraseña</mat-label>
+				<input matInput type="password" [type]="hidePassword ? 'password' : 'text'" [(ngModel)]="form.password"
+					(focus)="onPasswordFocus()" (blur)="onPasswordBlur()" required>
+				<button class="pass-icon" mat-icon-button matSuffix (click)="hidePassword = !hidePassword"
+					[attr.aria-label]="'Ocultar Password'" [attr.aria-pressed]="hidePassword" required>
+					<mat-icon>{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+				</button>
+				<mat-hint align="start">
+					Debe contener al
+					menos 1
+					mayúscula, 1
+					minúscula, 1 número, 1 símbolo y
+					mínimo 8 caracteres
+				</mat-hint>
+			</mat-form-field>
+			<!-- <div class="message-container">
+				<p [ngClass]="{ 'message-visible': inputPasswordFocus, 'message-hidden' : !inputPasswordFocus }">
+					Debe contener al
+					menos 1
+					mayúscula, 1
+					minúscula, 1 número, 1 símbolo y
+					mínimo 8 caracteres</p>
+			</div> -->
+			<button class="botones" type="submit" (click)="signupDireccion()">Siguiente</button>
+		</div>
+		<app-signup-direccion class="form-container-signup" *ngIf="mostrarComponenteHijo"
+			[inputData]="form"></app-signup-direccion>
+	</div>
+</div>
