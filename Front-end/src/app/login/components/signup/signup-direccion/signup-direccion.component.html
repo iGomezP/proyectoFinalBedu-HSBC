@@ -1,0 +1,48 @@
+<div>
+	<h1>Ahora tu domicilio</h1>
+</div>
+<div class="grid-container">
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Calle</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.calle" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Número interior</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.numeroInterior" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Numero Exterior</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.numeroExterior" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Ciudad</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.ciudad" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Estado</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.estado" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Código Postal</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.codigoPostal" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Colonia</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.colonia" required />
+	</mat-form-field>
+
+	<mat-form-field appearance="fill">
+		<mat-label class="inputs">Agrega referencias sobre tu domicilio</mat-label>
+		<input class="inputs" matInput type="text" [(ngModel)]="usuario.direccion.referencias" required />
+	</mat-form-field>
+</div>
+
+<div class="botones-container">
+	<button class="botones" type="submit" (click)="signup()">Registrarse</button>
+</div>
