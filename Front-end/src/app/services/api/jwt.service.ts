@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import jwt_decode from 'jwt-decode';
-import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -18,11 +17,8 @@ export class JwtService {
       this.resetLocalStorage();
       this.userJwtToken = fullToken.headers.get('Authorization');
       this.userName = fullToken.body.User;
-      localStorage.setItem(
-        environment.JWT_TOKEN,
-        JSON.stringify(this.userJwtToken)
-      );
-      localStorage.setItem(environment.JWT_USER, JSON.stringify(this.userName));
+      localStorage.setItem('GEROS_TOKEN', JSON.stringify(this.userJwtToken));
+      localStorage.setItem('GEROS_USER', JSON.stringify(this.userName));
       this.setUserRole(this.userJwtToken);
     }
   }
@@ -31,7 +27,7 @@ export class JwtService {
   getJwtToken(): string {
     let fullToken: string = '';
     try {
-      fullToken = this.getFullToken(environment.JWT_TOKEN);
+      fullToken = this.getFullToken('GEROS_TOKEN');
     } catch (error) {}
     let cleanToken: string = '';
     if (fullToken) {
@@ -73,7 +69,7 @@ export class JwtService {
   getUserName(): string {
     let userName = '';
     try {
-      userName = JSON.parse(localStorage.getItem(environment.JWT_USER) || '');
+      userName = JSON.parse(localStorage.getItem('GEROS_USER') || '');
     } catch (Error) {
       return '';
     } finally {
@@ -86,13 +82,13 @@ export class JwtService {
   private setUserRole(fullToken: string) {
     const cleanToken = this.cleanFullToken(fullToken);
     const userRole = this.getJwtRole(cleanToken);
-    localStorage.setItem(environment.JWT_ROLE, JSON.stringify(userRole));
+    localStorage.setItem('GEROS_ROL', JSON.stringify(userRole));
   }
 
   getUserRole(): string {
     let rol: string;
     try {
-      rol = JSON.parse(localStorage.getItem(environment.JWT_ROLE) || '');
+      rol = JSON.parse(localStorage.getItem('GEROS_ROL') || '');
       return rol;
     } catch (error) {
       return '';

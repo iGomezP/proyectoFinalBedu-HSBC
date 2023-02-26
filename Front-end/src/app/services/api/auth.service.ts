@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { environment } from 'src/environments/environment';
 import { UsuarioModel } from 'src/app/models/usuario.model';
 
-const AUTH_API = environment.API_SERVER;
+const AUTH_API = 'http://189.234.176.58/APIGeros/api/';
 
 const httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
 
