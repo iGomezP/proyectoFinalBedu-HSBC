@@ -70,11 +70,14 @@ export class JwtService {
   }
 
   // Obtener el usuario
-  getUserName() {
+  getUserName(): string {
+    let userName = '';
     try {
-      return JSON.parse(localStorage.getItem(environment.JWT_USER) || '');
+      userName = JSON.parse(localStorage.getItem(environment.JWT_USER) || '');
+    } catch (Error) {
+      return '';
     } finally {
-      return;
+      return userName;
     }
   }
 

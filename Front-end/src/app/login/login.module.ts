@@ -7,9 +7,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { SignupComponent } from './components/signup/signup.component';
+import { SignupDireccionComponent } from './components/signup/signup-direccion/signup-direccion.component';
+import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, SignupComponent, SignupDireccionComponent],
   imports: [
     CommonModule,
     FormsModule,
@@ -17,6 +20,7 @@ import { MatCardModule } from '@angular/material/card';
     MatInputModule,
     MatIconModule,
     MatCardModule,
+    MatGridListModule,
     HttpClientModule,
     ReactiveFormsModule,
   ],

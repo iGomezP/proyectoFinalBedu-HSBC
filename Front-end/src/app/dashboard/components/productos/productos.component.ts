@@ -29,9 +29,6 @@ export class ProductosComponent {
           next: (data) => {
             this.allFunkosData = data;
             this.funkoImage = data[0].awsImageFunko.awsUrl;
-            console.log(this.allFunkosData);
-            console.log(this.funkoImage);
-            //console.log(data);
           },
           error: (error) => console.log(error),
         });

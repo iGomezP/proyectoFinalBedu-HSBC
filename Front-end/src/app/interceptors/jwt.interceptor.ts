@@ -12,7 +12,14 @@ import { SnackbarService } from '../services/snackbar.service';
 
 @Injectable()
 export class JwtInterceptor implements HttpInterceptor {
-  private listaBlancaUrls: string[] = ['/login', '/signup', '/productos'];
+  // Lista de todas las peticiones http incluidas salidas al backend
+  private listaBlancaUrls: string[] = [
+    '/login',
+    '/signup',
+    '/productos',
+    '/register',
+    '/funkos',
+  ];
 
   constructor(
     private tokenService: JwtService,
@@ -24,8 +31,10 @@ export class JwtInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
+    console.log(`Origen interceptado: ${request.method} + ${request.url}`);
     // Verificar en la lista de Url
     if (this.listaBlancaUrls.some((url) => request.url.includes(url))) {
+      console.log('Peticion permitida');
       return next.handle(request);
     }
 

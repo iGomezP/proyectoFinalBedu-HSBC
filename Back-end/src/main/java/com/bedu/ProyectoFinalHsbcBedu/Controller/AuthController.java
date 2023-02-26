@@ -22,7 +22,7 @@ public class AuthController{
     @PostMapping("/register")
     public ResponseEntity<AuthResponse> registerUser(@Valid @RequestBody UsuarioEntityDTO regRequest){
         authService.registerUser(regRequest);
-    return ResponseEntity.created(URI.create("/login")).build();
+    return ResponseEntity.created(URI.create("0")).build();
     }
 
     // Se maneja el login por filtro JwtToHeaderFilter

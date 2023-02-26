@@ -24,9 +24,9 @@ public class UsuarioEntityDTO {
     private Long id;
 
     @NotEmpty(message = "El nombre no puede estar vacío")
-    @Pattern(regexp = "^[A-z_].{6,12}",
+    @Pattern(regexp = "^[A-z_].{6,30}",
             message = "El nombre no debe contener caracteres especiales," +
-                    " debe tener mínimo 6 caracteres y máximo 12")
+                    " debe tener mínimo 6 caracteres y máximo 30")
     private String name;
 
     @Email(message = "Se debe introducir un email válido")

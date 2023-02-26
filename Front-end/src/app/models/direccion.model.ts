@@ -4,7 +4,7 @@ export interface Direccion {
   numeroExterior: string;
   ciudad: string;
   estado: string;
-  codigoPostal: number;
+  codigoPostal: string;
   colonia: string;
   referencias: string;
 }

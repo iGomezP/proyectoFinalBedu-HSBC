@@ -37,7 +37,7 @@ export class HeaderComponent implements OnInit {
       this.roleVerified = false;
     }
     this.userName = this.tokenService.getUserName();
-    if (this.userName === undefined) {
+    if (this.userName === undefined || this.userName === '') {
       return;
     }
     this.snackService.printBienvenida('Bienvenido! - ' + this.userName);
