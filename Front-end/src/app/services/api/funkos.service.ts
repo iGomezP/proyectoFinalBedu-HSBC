@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { JwtService } from './jwt.service';
 
-const AUTH_API = 'http://189.234.176.58/APIGeros/api/';
+const AUTH_API = 'https://189.234.176.58/APIGeros/api/';
 //const AUTH_API = 'http://localhost:8080/';
 
 @Injectable({
