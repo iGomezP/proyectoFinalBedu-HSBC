@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/api/auth.service';
 import { JwtService } from 'src/app/services/api/jwt.service';
@@ -9,7 +9,7 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
   form = {
     username: '',
     password: '',
@@ -43,13 +43,16 @@ export class LoginComponent {
   saveToken() {
     this.resetForm();
     this.tokenService.saveFullToken(this.fullRes);
-    this.snackService.printBienvenida(
-      'Bienvenido! - ' + this.tokenService.getUserName()
-    );
   }
 
   resetForm() {
     this.form.username = '';
     this.form.password = '';
+  }
+
+  ngOnInit(): void {
+    if (this.tokenService.getJwtToken()) {
+      this.router.navigate(['/productos']);
+    }
   }
 }

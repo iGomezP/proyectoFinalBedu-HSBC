@@ -37,12 +37,15 @@ export class HeaderComponent implements OnInit {
       this.roleVerified = false;
     }
     this.userName = this.tokenService.getUserName();
+    if (this.userName === undefined) {
+      return;
+    }
+    this.snackService.printBienvenida('Bienvenido! - ' + this.userName);
   }
 
   closeSession() {
     this.tokenService.resetLocalStorage();
-    this.ngOnInit();
-    this.snackService.printErrorCustom('Se ha cerrado la sesión exitosamente');
     this.router.navigate(['/login']).then(() => location.reload());
+    this.snackService.printErrorCustom('Se ha cerrado la sesión exitosamente');
   }
 }

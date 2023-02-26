@@ -71,7 +71,11 @@ export class JwtService {
 
   // Obtener el usuario
   getUserName() {
-    return JSON.parse(localStorage.getItem(environment.JWT_USER) || '');
+    try {
+      return JSON.parse(localStorage.getItem(environment.JWT_USER) || '');
+    } finally {
+      return;
+    }
   }
 
   // Guardar el rol u obtenerlo
