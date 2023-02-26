@@ -2,9 +2,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { JwtService } from './jwt.service';
+import { environment } from 'src/environments/environment.dev';
 
-const AUTH_API = 'https://189.234.176.58/APIGeros/api/';
-//const AUTH_API = 'http://localhost:8080/';
+const AUTH_API = environment.API_URL;
 
 @Injectable({
   providedIn: 'root',

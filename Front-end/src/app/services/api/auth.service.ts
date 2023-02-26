@@ -2,13 +2,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { UsuarioModel } from 'src/app/models/usuario.model';
+import { environment } from 'src/environments/environment.dev';
 
-const AUTH_API = 'https://189.234.176.58/APIGeros/api/';
+const AUTH_API = environment.API_URL;
 
-const httpOptions = new HttpHeaders()
-  .set('Content-Type', 'application/json')
-  .set('Access-Control-Allow-Origin', '*')
-  .set('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+const httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
 
 @Injectable({
   providedIn: 'root',
