@@ -99,19 +99,34 @@ app-footer {
 }
 
 .nav-secundario {
-  width: 70%;
+  width: 40%;
   float: right;
   text-align: right !important;
 }
 
 // ul
 .nav-primario {
-  width: 20%;
+  width: 50%;
   text-align: left;
 }
 
 .footer-primario {
   width: 90% !important;
+}
+
+// static image
+
+.img-container {
+  text-align: center;
+
+  > h1 {
+    font-weight: 900;
+  }
+}
+
+.logo_white {
+  height: 20rem;
+  border-radius: 50%;
 }
 
 // Inputs forms
@@ -139,6 +154,20 @@ app-footer {
 
 .mdc-text-field--filled .mdc-line-ripple::after {
   border-bottom-color: #fff;
+}
+
+.mdc-tab-indicator__content--underline {
+  width: 40% !important;
+}
+
+.mdc-tab-indicator .mdc-tab-indicator__content--underline {
+  border-top-width: 4px !important;
+}
+
+.mdc-tab-indicator__content {
+  transform-origin: left;
+  opacity: 0;
+  height: 1rem;
 }
 
 // Snackbar colors
