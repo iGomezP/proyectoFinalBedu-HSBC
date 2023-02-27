@@ -26,7 +26,6 @@ export class SnackbarService {
   }
 
   printErrorLogin(error: HttpErrorResponse) {
-    console.log(error);
     const statusError: number = error.status;
     const errorMessage: string = error.error.error;
     if (statusError === 401) {

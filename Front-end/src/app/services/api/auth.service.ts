@@ -6,7 +6,9 @@ import { environment } from 'src/environments/environment.dev';
 
 const AUTH_API = environment.API_URL;
 
-const httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
+const httpOptions = new HttpHeaders()
+  .set('Content-Type', 'application/json')
+  .set('Access-Control-Allow-Origin', '*');
 
 @Injectable({
   providedIn: 'root',
@@ -15,7 +17,6 @@ export class AuthService {
   constructor(private httpClient: HttpClient) {}
 
   apiLogin(username: string, password: string): Observable<any> {
-    console.log(httpOptions);
     return this.httpClient.post<any>(
       AUTH_API + 'auth/login',
       {

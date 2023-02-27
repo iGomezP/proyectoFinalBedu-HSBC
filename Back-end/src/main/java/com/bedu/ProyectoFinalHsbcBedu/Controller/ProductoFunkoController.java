@@ -29,7 +29,8 @@ public class ProductoFunkoController {
         return ResponseEntity.ok().body(funkoService.getFunkoById(id));
     }
 
-    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_JSON_ollññoijkjiyyjkb,hvnlkhjkythrows Exception {
+    @PostMapping(consumes = {MediaType.MULTIPART_FORM_DATA_VALUE, MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<ProductoFunkoDTO> createFunko(@RequestParam("dataFunko") String funkoJson, @RequestParam("imageFunko") MultipartFile imageFunko) throws Exception {
         funkoService.createFunko(funkoJson, imageFunko);
         return ResponseEntity.created(URI.create("0")).build();
     }

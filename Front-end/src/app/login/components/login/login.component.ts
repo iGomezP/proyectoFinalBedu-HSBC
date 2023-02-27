@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
 
   login(): void {
     const { username, password } = this.form;
-    console.log('Cargando...');
     this.authService.apiLogin(username, password).subscribe({
       next: (res) => (this.fullRes = res),
       error: (error) => this.snackService.printErrorLogin(error),
