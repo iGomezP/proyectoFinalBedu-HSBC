@@ -1,0 +1,73 @@
+.funkos-container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 90rem;
+  padding: 2rem 0;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.grid-container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  gap: 1rem;
+}
+
+.mat-mdc-form-field {
+  width: 100%;
+}
+
+.inputs {
+  text-align: right;
+}
+
+.botones {
+  width: 100% !important;
+}
+
+.mdc-line-ripple .ng-tns-c99-1 .ng-star-inserted {
+  .ng-tns-c99-1,
+  .ng-tns-c99-2,
+  .ng-tns-c99-3,
+  .ng-tns-c99-4,
+  .ng-tns-c99-5 {
+    color: rgba(255, 255, 255, 0.87);
+  }
+}
+
+.prefix {
+  color: rgba(255, 255, 255, 0.87);
+}
+
+input.inputs::-webkit-outer-spin-button,
+input.inputs::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.inputs {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.image {
+  text-align: center;
+}
+
+.imageName {
+  font-weight: bolder;
+}

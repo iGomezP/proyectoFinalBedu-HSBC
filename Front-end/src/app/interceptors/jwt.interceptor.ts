@@ -31,10 +31,8 @@ export class JwtInterceptor implements HttpInterceptor {
     request: HttpRequest<unknown>,
     next: HttpHandler
   ): Observable<HttpEvent<unknown>> {
-    console.log(`Origen interceptado: ${request.method} + ${request.url}`);
     // Verificar en la lista de Url
     if (this.listaBlancaUrls.some((url) => request.url.includes(url))) {
-      console.log('Peticion permitida');
       return next.handle(request);
     }
 
@@ -56,7 +54,6 @@ export class JwtInterceptor implements HttpInterceptor {
     } else {
       // Token inválido o expirado, redirige al usuario a la página de inicio de sesión
       this.tokenService.resetLocalStorage();
-      console.log('No logueado');
       this.router.navigate(['/login']).then(() => window.location.reload());
     }
 

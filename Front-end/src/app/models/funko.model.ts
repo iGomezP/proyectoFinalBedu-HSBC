@@ -2,8 +2,8 @@ import { AwsImageFunko } from './imagenFunko';
 
 export interface FunkoModel {
   name: string;
-  price: number;
-  stock: number;
-  layaway: number;
+  price: string;
+  stock: string;
+  layaway: string;
   awsImageFunko: AwsImageFunko;
 }

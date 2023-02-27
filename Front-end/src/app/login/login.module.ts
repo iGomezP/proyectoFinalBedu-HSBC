@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { SignupComponent } from './components/signup/signup.component';
 import { SignupDireccionComponent } from './components/signup/signup-direccion/signup-direccion.component';
-import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [LoginComponent, SignupComponent, SignupDireccionComponent],
@@ -20,7 +19,6 @@ import { MatGridList, MatGridListModule } from '@angular/material/grid-list';
     MatInputModule,
     MatIconModule,
     MatCardModule,
-    MatGridListModule,
     HttpClientModule,
     ReactiveFormsModule,
   ],

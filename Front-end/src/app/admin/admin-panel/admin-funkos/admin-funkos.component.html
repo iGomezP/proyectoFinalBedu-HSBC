@@ -1,0 +1,41 @@
+<div class="funkos-container">
+	<div class="container">
+		<div class="img-container">
+			<img class="logo_white" src="assets/imgs/Logo_White.png" alt="Logo">
+			<h1>Registro de Pops</h1>
+		</div>
+
+		<form [formGroup]="formFunko" (ngSubmit)="registrarFunko" class="grid-container">
+
+			<mat-form-field appearance="fill" floatLabel="always">
+				<mat-label>Nombre</mat-label>
+				<input matInput type="text" formControlName="name" required />
+			</mat-form-field>
+
+			<mat-form-field appearance="fill" floatLabel="always">
+				<mat-label>Precio</mat-label>
+				<input class="inputs" matInput type="number" formControlName="price" placeholder="0" required />
+				<span class="prefix" matTextPrefix>$&nbsp;</span>
+				<span class="prefix" matTextSuffix>.00</span>
+			</mat-form-field>
+
+			<mat-form-field appearance="fill" floatLabel="always">
+				<mat-label>En stock</mat-label>
+				<input matInput type="text" formControlName="stock" required />
+			</mat-form-field>
+
+			<mat-form-field appearance="fill" floatLabel="always">
+				<mat-label>Apartados</mat-label>
+				<input matInput type="text" formControlName="layaway" required />
+			</mat-form-field>
+
+			<button class="botones" type="button" mat-raised-button (click)="fileInput.click()">Selecciona la imagen del
+				producto</button>
+			<input hidden (change)="onFileSelected($event)" #fileInput type="file">
+
+			<p class="image">Nombre de la imagen: <span class="imageName">{{imageName}}</span></p>
+
+			<button class="botones" type="submit">Registrar Funko</button>
+
+		</form>
+	</div>

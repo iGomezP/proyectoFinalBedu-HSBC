@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminPanelComponent } from './admin/admin-panel/admin-panel.component';
-import { AdminProductosComponent } from './admin/admin-productos/admin-productos.component';
 import { ProductosComponent } from './dashboard/components/productos/productos.component';
 import { UsuariosComponent } from './dashboard/components/usuarios/usuarios.component';
 import { AdminGuard } from './guards/admin.guard';
@@ -16,13 +15,6 @@ const routes: Routes = [
     path: 'admin',
     component: AdminPanelComponent,
     canActivate: [AdminGuard],
-    children: [
-      {
-        path: '**',
-        component: AdminProductosComponent,
-      },
-    ],
-    canActivateChild: [AdminGuard],
   },
   { path: 'usuarios', component: UsuariosComponent },
   { path: 'productos', component: ProductosComponent },
