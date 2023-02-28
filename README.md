@@ -29,3 +29,12 @@ Ser una plataforma E-commerce 🛒 completa que cuente con:
 * Sistema de apartado ✨
 * Sistema de pre-ventas 🎫
 * Sistema de rifas y subastas 🔨
+
+Ser una plataforma de administración (para el dueño) que cuente con:
+* Publicación de sus productos dentro de la web 🌐
+* Control de inventarios 📝
+* Control de ventas 📊
+* Control de rifas y subastas 🔨
+* Control de pre-ventas 🎫
+* Facturación 🧾
+* Posibilidad de publicar los productos en redes dentro del mismo aplicativo sin necesidad de ir a cada una de las plataformas 💻
