@@ -1,3 +1,5 @@
+.backup
+
 Back-end/logs/**
 Back-end/target/**
 Back-end/.idea
