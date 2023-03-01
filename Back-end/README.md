@@ -12,7 +12,7 @@ Bienvenidos al Back-end del proyecto final Bedu-HSBC
 * Springboot 3.0.2
 * Maven
 
-Para revisar dependencias adicionales consulta el archivo [pom.xml](./Back-end/pom.xml)
+Para revisar dependencias adicionales consulta el archivo [pom.xml](./pom.xml)
 
 ## Descripción
 

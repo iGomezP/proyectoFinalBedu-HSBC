@@ -12,7 +12,7 @@ Bienvenidos al Back-end del proyecto final Bedu-HSBC
 * Springboot 3.0.2
 * Maven
 
-Para revisar dependencias adicionales consulta el archivo [pom.xml](./Back-end/pom.xml)
+Para revisar dependencias adicionales consulta el archivo [pom.xml](./pom.xml)
 
 ## Descripción
 
@@ -65,7 +65,7 @@ La aplicación cuenta con los siguientes endpoints:
 
 |Nombre|Descripción|
 |---|---|
-|`/api`|Ruta base para el resto de los endpoints|
+|`/api/`|Ruta base para el resto de los endpoints|
 |`/auth/login`|Para el logueo de usuarios|
 |`/auth/register`|Para el registo de nuevos usuario|
-|`/productos/**`||
+|`/productos/funkos`|Para CRUD de los productos|

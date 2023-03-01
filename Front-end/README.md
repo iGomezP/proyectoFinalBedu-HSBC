@@ -14,7 +14,7 @@ Por favor considera lo siguiente si deseas probarlo:
 
 * Una vez clonado o descargado el proyecto, puedes iniciarlo utilizando el comando: `ng serve` para generar un servidor local de Angular. Luego navega a la siguiente dirección: `http://localhost:4200/`.
 
-* Actualmente la aplicación se encuentra apuntando a una dirección api dentro de la red `API_URL: 'http://192.168.0.186:9117/APIGeros/api/'`, si deseas probar la conexión al back-end cambia la dirección a: `API_URL: 'http://189.234.176.58/APIGeros/api/'`, basta con comentar y descomentar la constante dentro del archivo [environment.ts](./src/environments/)
+* Actualmente la aplicación se encuentra apuntando a una dirección api dentro de la red `API_URL: 'http://192.168.0.186:9117/APIGeros/api/'`, si deseas probar la conexión al back-end cambia la dirección a: `API_URL: 'http://189.234.176.58/APIGeros/api/'`, basta con comentar y descomentar la constante dentro del archivo [environment.ts](./src/environments/environment.dev.ts)
 
 * El proyecto cuenta con dos usuarios registrados, uno con nivel Administrador y otro con nivel usuario:
 
