@@ -44,6 +44,4 @@ Back-end/.vscode/
 Front-end/.vscode
 Front-end/node_modules
 Front-end/.angular
-Front-end/src/environment.**.ts
-Front-end/src/environments/**
 Front-end/dist
