@@ -54,10 +54,10 @@ export class SignupComponent implements OnInit {
   verifyAllConditions() {
     if (this.inputUser && this.inputEmail && this.inputPassword) {
       this.allConditionsMet = true;
-      console.log(this.allConditionsMet);
+      //console.log(this.allConditionsMet);
     } else {
       this.allConditionsMet = false;
-      console.log(this.allConditionsMet);
+      //console.log(this.allConditionsMet);
     }
   }
 

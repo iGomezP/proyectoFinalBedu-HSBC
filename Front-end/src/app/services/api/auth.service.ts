@@ -6,9 +6,7 @@ import { environment } from 'src/environments/environment.dev';
 
 const AUTH_API = environment.API_URL;
 
-const httpOptions = new HttpHeaders()
-  .set('Content-Type', 'application/json')
-  .set('Access-Control-Allow-Origin', '*');
+const httpOptions = new HttpHeaders().set('Content-Type', 'application/json');
 
 @Injectable({
   providedIn: 'root',

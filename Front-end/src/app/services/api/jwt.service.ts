@@ -13,12 +13,9 @@ export class JwtService {
 
   // Guardar jwt completo, usuario y rol
   saveFullToken(fullToken: any) {
-    console.log(fullToken);
     if (fullToken) {
       this.resetLocalStorage();
       this.userJwtToken = fullToken.headers.get('Authorization');
-      console.log(this.userJwtToken);
-
       this.userName = fullToken.body.User;
       localStorage.setItem('GEROS_TOKEN', JSON.stringify(this.userJwtToken));
       localStorage.setItem('GEROS_USER', JSON.stringify(this.userName));

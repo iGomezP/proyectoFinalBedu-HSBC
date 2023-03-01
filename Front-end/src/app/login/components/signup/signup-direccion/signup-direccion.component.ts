@@ -43,10 +43,15 @@ export class SignupDireccionComponent implements OnInit {
   // }
 
   signup() {
-    console.log('Haciendo post para el registro');
+    //console.log('Haciendo post para el registro');
     this.authService.apiRegister(this.usuario).subscribe({
       next: (res) => {},
-      error: (error) => console.log(error),
+      error: (error) => {
+        console.log(error.error.errores);
+        this.snackbarService.printErrorCustom(
+          'Hubo un error en el registro, revisa que los datos sean correctos'
+        );
+      },
       complete: () => {
         this.snackbarService.printBienvenida(
           'Registro exitoso, por favor inicia sesión'
