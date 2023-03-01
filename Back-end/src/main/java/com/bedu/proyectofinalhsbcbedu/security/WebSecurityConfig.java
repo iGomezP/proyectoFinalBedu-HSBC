@@ -82,9 +82,9 @@ public class WebSecurityConfig {
         configuration.addAllowedOriginPattern("*");
         configuration.addAllowedHeader("*");
         configuration.addAllowedMethod("*");
-        //configuration.setAllowedHeaders(Arrays.asList("Authorization","Requestor-Type","Content-Type"));
-        //configuration.setExposedHeaders(Arrays.asList("X-Get-Header", "Authorization"));
-        //configuration.setMaxAge(3600L);
+        configuration.setAllowedHeaders(Arrays.asList("Authorization","Requestor-Type","Content-Type"));
+        configuration.setExposedHeaders(Arrays.asList("X-Get-Header", "Authorization"));
+        configuration.setMaxAge(3600L);
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);
         return source;
